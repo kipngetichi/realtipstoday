@@ -1,0 +1,419 @@
+<?php
+declare(strict_types=1);
+
+$whatsappLink = 'https://wa.me/25471380429?text=Hello%20Realtime%20Tips%2C%20I%20want%20premium%20football%20sure%20tips.';
+$telegramLink = 'https://t.me/25471380429';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how Realtime Tips works - from free daily tips to premium VIP packages and international payments.">
+    <title>How It Works | Realtime Tips</title>
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+    <style>
+        :root {
+            --bg-dark: #0b122b;
+            --bg-light: #f3f6ff;
+            --card: #ffffff;
+            --accent: #10b981;
+            --primary: #2563eb;
+            --border: rgba(15, 23, 42, 0.10);
+            --text-main: #0f172a;
+            --text-soft: #475569;
+            --white: #ffffff;
+            --radius-lg: 22px;
+            --shadow-soft: 0 20px 40px rgba(6, 10, 26, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            max-width: 100vw;
+            overflow-x: hidden;
+            height: 100%;
+            background: var(--bg-light);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.5;
+            background: var(--bg-light);
+            padding-bottom: 120px;
+            min-width: 320px;
+            height: 100%;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        .nav-wrap {
+            background: var(--bg-dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo-text {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo-text span:first-child {
+            color: var(--accent);
+        }
+
+        .nav-logo-text span:last-child {
+            color: var(--white);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--white);
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: rgba(255,255,255,0.85);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color 0.2s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: var(--white);
+        }
+
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--card);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-width: 180px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: block;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.6rem 1rem;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: #06251b;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+        }
+
+        .section {
+            padding: 3rem 0;
+            background: transparent;
+        }
+
+        .section h3 {
+            margin: 0 0 0.8rem;
+            font-size: clamp(1.45rem, 2.5vw, 2rem);
+        }
+
+        .section p {
+            margin: 0 0 1.5rem;
+            color: var(--text-soft);
+            max-width: 70ch;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin: 0 auto 1rem;
+        }
+
+        .step-card h4 {
+            margin: 0 0 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .step-card p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .features-section {
+            background: var(--bg-light);
+            padding: 3rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-card h4 {
+            margin: 0 0 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        .footer {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #050d1f 100%);
+            color: var(--white);
+            padding: 3.5rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 800px) {
+            .nav-menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-wrap">
+        <div class="container nav-container">
+            <a href="../index.php" class="nav-logo">
+                <span class="nav-logo-text">
+                    <span>RT</span><span>Tips</span>
+                </span>
+            </a>
+            <div class="nav-menu">
+                <a href="../index.php" class="nav-link">Home</a>
+                <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Tips <span>▼</span></span>
+                    <div class="nav-dropdown-menu">
+                        <a href="../Tips/goldentips.php">Golden Fixed Tips</a>
+                        <a href="../Tips/2odds.php">2+ Odds Daily</a>
+                        <a href="../Tips/2draws.php">2 Draw Games</a>
+                    </div>
+                </div>
+                <a href="../international-payment.php" class="nav-link">International</a>
+                <a href="#" class="nav-link">Support</a>
+            </div>
+            <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="nav-cta">Get Tips Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h3>How It Works</h3>
+                <p>Getting started with Realtime Tips is simple. Follow these easy steps to start winning with our expert football predictions.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Check Free Daily Tips</h4>
+                        <p>Visit our homepage to see today's free tip. This helps you build trust in our predictions before upgrading.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Choose Your Package</h4>
+                        <p>Select from Golden Fixed (45+ odds), 2+ odds daily, or 2 Draw Games based on your budget and preferences.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Make Payment</h4>
+                        <p>Use M-Pesa, Airtel Money, PayPal, or Skrill. Payments are processed instantly for immediate access.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>Receive Tips</h4>
+                        <p>Get tips delivered to your Telegram channel or WhatsApp. Early anticipation picks posted before kickoff.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <h4>Start Winning</h4>
+                        <p>Place your bets and watch your profits grow. Our expert team ensures consistent results.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <h4>Repeat Success</h4>
+                        <p>Subscribe monthly or as needed. Money-back guarantee if tips don't deliver as promised.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h3>Why Choose Realtime Tips?</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4>Expert Analysis</h4>
+                        <p>Our professional tipsters analyze thousands of matches weekly using advanced statistics and insider knowledge.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Early Access</h4>
+                        <p>Get tips hours before kickoff, giving you time to place bets at the best odds across different bookmakers.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Proven Track Record</h4>
+                        <p>86% accuracy rate with thousands of satisfied customers. Check our testimonials for real success stories.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Flexible Pricing</h4>
+                        <p>From affordable 2+ odds at Ksh 100 to premium Golden Fixed at Ksh 525. International payments accepted.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Money-Back Guarantee</h4>
+                        <p>If our tips don't win, we refund your payment. No risk, only potential profits.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>24/7 Support</h4>
+                        <p>Contact us anytime via WhatsApp or Telegram for assistance with payments, tips, or any questions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p style="text-align: center; color: rgba(255,255,255,0.7); margin: 0; padding: 2rem 0;">
+                © 2024 Realtime Tips. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
