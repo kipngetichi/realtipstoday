@@ -177,13 +177,13 @@ body {
             margin-top: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
+            gap: 0;
             align-items: stretch;
         }
 
         .trust-item {
             background: var(--card);
-            border: 1px solid var(--border);
+            border: none;
             border-radius: 20px;
             padding: 1.5rem 1.25rem;
             text-align: left;
@@ -520,15 +520,40 @@ body {
             color: var(--primary);
         }
 
-        .trust-cta {
-            grid-column: 1 / -1;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.9rem;
-            padding-top: 0.1rem;
-            min-width: 0;
-        }
+.trust-cta {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+    padding-top: 0.1rem;
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .trust-cta {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .trust-cta .btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .trust-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .trust-cta .btn {
+        flex: 1 1 100%;
+        max-width: none;
+        width: 100%;
+    }
+}
 
         .trust-cta .btn {
             flex: 0 1 auto;
@@ -733,6 +758,28 @@ body {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
+            
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .trust-item {
+                padding: 1.25rem;
+                min-width: 0;
+            }
+            
+            .trust-cta {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                width: 100%;
+            }
         }
 
             .hero {
@@ -809,12 +856,11 @@ body {
                  display: none;
              }
 
-            .sticky-contact {
-                right: 0.7rem;
-                bottom: 0.7rem;
-                gap: 0.5rem;
-            }
-        }
+             .sticky-contact {
+                 right: 0.7rem;
+                 bottom: 0.7rem;
+                 gap: 0.5rem;
+             }
 
         .nav-wrap {
             background: var(--bg-dark);
@@ -1845,11 +1891,166 @@ body {
               }
           }
 
-          @media (max-width: 768px) {
-              .footer-pricing-cards {
-                  grid-template-columns: 1fr;
-                  gap: 1.25rem;
-              }
+            @media (max-width: 768px) {
+                .footer-pricing-cards {
+                    grid-template-columns: 1fr;
+                    gap: 1.25rem;
+                }
+            }
+            
+@media (min-width: 1200px) {
+    .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .trust-item {
+        flex: 1;
+        padding: 1.25rem 1rem;
+    }
+
+    .trust-item > span {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .trust-cta {
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+    
+    .trust-cta .btn {
+        flex: 1 1 0px;
+        min-width: 180px;
+        max-width: 250px;
+    }
+}
+
+            .trust-item small {
+                font-size: 0.8rem;
+                margin-top: 0.15rem;
+            }
+
+            .free-tip-title {
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .meta-pill {
+                padding: 0.55rem 0.7rem;
+                gap: 0.5rem;
+            }
+
+            .meta-label {
+                font-size: 0.8rem;
+            }
+
+            .meta-value {
+                font-size: 0.8rem;
+            }
+
+            .early-title {
+                font-size: 1rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .early-subtitle {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .early-pricing {
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+            }
+
+            .early-row {
+                padding: 0.3rem 0;
+            }
+
+            .early-plan {
+                font-size: 0.85rem;
+            }
+
+            .early-price {
+                font-size: 0.85rem;
+            }
+
+            .early-payment {
+                margin-top: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .early-payment-label {
+                font-size: 0.7rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .early-payment-method {
+                font-size: 0.8rem;
+            }
+
+            .early-copy-hint {
+                font-size: 0.7rem;
+            }
+
+            .inline-pay-till-copy {
+                font-size: 1rem;
+                padding: 0.25rem 0.6rem;
+            }
+
+            .intl-title {
+                font-size: 1rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .intl-subtitle {
+                font-size: 0.8rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .intl-pricing {
+                font-size: 0.85rem;
+                margin-top: 0.4rem;
+            }
+
+            .intl-row {
+                padding: 0.2rem 0;
+            }
+
+            .intl-price {
+                font-size: 0.85rem;
+            }
+
+            .intl-payment {
+                margin-top: 0.5rem;
+                padding: 0.4rem;
+                font-size: 0.8rem;
+            }
+
+            .intl-payment-row {
+                padding: 0.2rem 0;
+            }
+
+            .intl-payment-label,
+            .intl-payment-value {
+                font-size: 0.8rem;
+            }
+
+            .trust-cta {
+                flex: 0 0 100%;
+                margin-top: 0.75rem;
+            }
+
+            .trust-cta .btn {
+                flex: 1 1 22%;
+                min-width: 180px;
+                max-width: none;
+                padding: 0.75rem 0.5rem;
+                font-size: 0.85rem;
+                text-align: center;
+            }
 
               .pricing-card {
                   min-height: auto;
@@ -1905,8 +2106,8 @@ body {
                   letter-spacing: 1px;
                   overflow-wrap: anywhere;
                   word-break: break-word;
-              }
-          }
+               }
+        
 
           @media (max-width: 480px) {
               .footer {
@@ -2518,7 +2719,7 @@ body {
 
             <div class="trust-cta">
                 <a class="btn btn-primary" href="Tips/goldentips.php" target="_blank" rel="noopener noreferrer">Get Golden Fixed Tips by clicking Here</a>
-                <a class="btn btn-ghost" href="Tips/2odds.php" target="_blank" rel="noopener noreferrer">click here to Get 2+odds Daily</a>
+                <a class="btn btn-ghost" href="Tips/2odds.php" target="_blank" rel="noopener noreferrer">click here to Get Today 2+odds Daily</a>
                 <a class="btn btn-accent" href="Tips/2draws.php" target="_blank" rel="noopener noreferrer">click here to Get Today 2 Draw Tips</a>
                 <a class="btn btn-intl" href="international-payment.php" target="_blank" rel="noopener noreferrer">International Subscribers click here</a>
             </div>
