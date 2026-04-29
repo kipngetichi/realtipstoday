@@ -3,15 +3,14 @@
   "buildCommand": "echo 'PHP site - no build needed'",
   "devCommand": "php -S localhost:3000",
   "installCommand": "echo 'No dependencies'",
-  "outputDirectory": ".",
   "functions": {
-    "**/*.php": {
+    "api/**/*.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
   "routes": [
-    { "src": "/international-payment\\.php", "dest": "/international-payment.php" },
-    { "src": "/international-usd\\.php", "dest": "/international-usd.php" },
-    { "src": "/(.*)", "dest": "/index.php" }
+    { "src": "/international-payment\\.php", "dest": "/api/international-payment.php" },
+    { "src": "/international-usd\\.php", "dest": "/api/international-usd.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
