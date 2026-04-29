@@ -1,6 +1,7 @@
 {
   "version": 2,
   "buildCommand": "echo 'PHP site - no build needed'",
+  "outputDirectory": ".",
   "devCommand": "php -S localhost:3000",
   "installCommand": "echo 'No dependencies'",
   "functions": {
