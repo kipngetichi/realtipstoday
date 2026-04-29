@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "echo 'PHP site - no build needed'",
+  "devCommand": "php -S localhost:3000",
+  "installCommand": "echo 'No dependencies'",
+  "framework": "none",
+  "functions": {
+    "index.php": { "runtime": "vercel-php@0.9.0" },
+    "international-payment.php": { "runtime": "vercel-php@0.9.0" },
+    "international-usd.php": { "runtime": "vercel-php@0.9.0" }
+  }
+}

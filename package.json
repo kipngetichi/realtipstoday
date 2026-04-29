@@ -1,0 +1,14 @@
+{
+  "name": "realtimetips",
+  "version": "1.0.0",
+  "description": "Realtime Football Tips Website",
+  "main": "index.php",
+  "scripts": {
+    "dev": "php -S localhost:3000",
+    "build": "echo 'No build needed'",
+    "start": "php -S localhost:3000"
+  },
+  "keywords": ["php", "football", "tips"],
+  "author": "Realtime Tips",
+  "license": "MIT"
+}
