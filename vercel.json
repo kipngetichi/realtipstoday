@@ -8,5 +8,10 @@
     "index.php": { "runtime": "vercel-php@0.9.0" },
     "international-payment.php": { "runtime": "vercel-php@0.9.0" },
     "international-usd.php": { "runtime": "vercel-php@0.9.0" }
-  }
+  },
+  "routes": [
+    { "src": "/international-payment\\.php", "dest": "/international-payment.php" },
+    { "src": "/international-usd\\.php", "dest": "/international-usd.php" },
+    { "src": "/(.*)", "dest": "/index.php" }
+  ]
 }
