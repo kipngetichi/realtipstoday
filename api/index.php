@@ -1,3 +1,8 @@
+@@ -1,4 +1,12 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+require_once __DIR__ . '/../index.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
