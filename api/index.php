@@ -1,8 +1,3 @@
-@@ -1,4 +1,12 @@
-<?php
-header('Content-Type: text/html; charset=utf-8');
-require_once __DIR__ . '/../index.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +7,7 @@ require_once __DIR__ . '/../index.php';
 
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
+<?php echo "Server time: " . date('Y-m-d H:i:s'); ?>
 
 </body>
 </html>
