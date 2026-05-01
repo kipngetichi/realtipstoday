@@ -3,7 +3,7 @@
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
   "functions": {
-    "api/index.php": {
+    "api/**/*.php": {
       "runtime": "vercel-php@0.7.1"
     }
   },
@@ -26,7 +26,7 @@
     { "src": "/jackpot/", "dest": "/api/Jptips/index.php" },
     { "src": "/Jptips", "dest": "/api/Jptips/index.php" },
     { "src": "/Jptips/", "dest": "/api/Jptips/index.php" },
-    { "src": "/", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/", "dest": "/api/home.php" },
+    { "src": "/(.*)", "dest": "/api/home.php" }
   ]
 }
