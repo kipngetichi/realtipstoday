@@ -12,11 +12,14 @@ A PHP-based football tips website with MPESA integration, designed for Vercel de
 
 ## Local Development
 
+The easiest way to run locally is with the Vercel CLI, which respects the same routing as production:
+
 ```bash
-php -S localhost:3000
+npm install -g vercel
+vercel dev
 ```
 
-Visit `http://localhost:3000` in your browser.
+Or use PHP's built-in server with the `/api` directory as the document root. However, using `vercel dev` is recommended for accurate routing.
 
 ## Deployment to Vercel
 
@@ -63,32 +66,35 @@ https://yourdomain.com/callback.php
 
 ## Project Structure
 
+All PHP files are located in the `/api` directory for Vercel compatibility:
+
 ```
-├── index.php                 # Landing page
-├── vercel.json               # Vercel configuration
-├── .gitignore               # Git ignore file
-├── api/
-│   ├── index.php            # API home (fallback)
+├── api/                    # All PHP serverless functions
+│   ├── index.php           # Landing page
 │   ├── international-payment.php
-│   └── international-usd.php
-├── Tips/
-│   ├── 2draws.php          # 2 Draws Tips page
-│   ├── 2odds.php           # 2+ Odds page
-│   └── goldentips.php      # Golden Fixed Tips page
-├── Jptips/
-│   └── index.php           # Jackpot Tips page
-├── testimonial/
-│   └── index.php           # Testimonials page
-├── support/
-│   ├── contact-us.php      # Contact page
-│   ├── faq.php             # FAQ page
-│   └── how-it-works.php    # How It Works page
-└── M-PESAstkpush/
-    ├── config.php          # MPESA configuration
-    ├── stkpush.php         # Main STK Push (Golden Tips)
-    ├── stkpush2draws.php   # STK Push for 2 Draws
-    ├── stkpush2odds.php    # STK Push for 2 Odds
-    └── callback.php        # MPESA callback handler
+│   ├── international-usd.php
+│   ├── Tips/
+│   │   ├── 2draws.php
+│   │   ├── 2odds.php
+│   │   └── goldentips.php
+│   ├── support/
+│   │   ├── contact-us.php
+│   │   ├── faq.php
+│   │   └── how-it-works.php
+│   ├── Jptips/
+│   │   └── index.php
+│   ├── testimonial/
+│   │   └── index.php
+│   └── M-PESAstkpush/
+│       ├── config.php
+│       ├── stkpush.php
+│       ├── stkpush2draws.php
+│       ├── stkpush2odds.php
+│       └── callback.php
+├── vercel.json             # Vercel configuration
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
 ## URL Routes

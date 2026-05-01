@@ -21,7 +21,7 @@ return [
     'business_short_code' => getenv('MPESA_BUSINESS_SHORT_CODE') ?: '5438677',
 
     // Callback URL - Must be HTTPS. Set MPESA_CALLBACK_URL env var for Vercel deployment
-    'callback_url' => getenv('MPESA_CALLBACK_URL') ?: 'https://yourdomain.com/M-PESAstkpush/callback.php',
+    'callback_url' => getenv('MPESA_CALLBACK_URL') ?: 'https://yourdomain.com/callback.php',
 
     // Environment: 'sandbox' or 'production' (set MPESA_ENVIRONMENT env var)
     'environment' => getenv('MPESA_ENVIRONMENT') ?: 'sandbox',
