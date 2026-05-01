@@ -2,7 +2,7 @@
   "name": "realtimetips",
   "version": "1.0.0",
   "description": "Realtime Football Tips Website",
-  "main": "index.php",
+  "main": "api/home.php",
   "scripts": {
     "dev": "php -S localhost:3000",
     "build": "echo 'No build needed'",
