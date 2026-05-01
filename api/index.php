@@ -13,8 +13,8 @@ if ($requestPath !== '/' && str_ends_with($requestPath, '/')) {
 
 // Map routes to file paths
 $routes = [
-    '/' => 'home.php',
-    '/index.php' => 'home.php',
+    '/' => '../index.php',
+    '/index.php' => '../index.php',
     '/2draws.php' => 'Tips/2draws.php',
     '/2odds.php' => 'Tips/2odds.php',
     '/goldentips.php' => 'Tips/goldentips.php',
@@ -27,8 +27,8 @@ $routes = [
     '/jackpot/' => 'Jptips/index.php',
     '/Jptips' => 'Jptips/index.php',
     '/Jptips/' => 'Jptips/index.php',
-    '/international-payment.php' => 'international-payment.php',
-    '/international-usd.php' => 'international-usd.php',
+    '/international-payment.php' => '../international-payment.php',
+    '/international-usd.php' => '../international-usd.php',
     '/callback.php' => 'M-PESAstkpush/callback.php',
     '/stkpush.php' => 'M-PESAstkpush/stkpush.php',
     '/stkpush2draws.php' => 'M-PESAstkpush/stkpush2draws.php',
@@ -55,4 +55,4 @@ if (file_exists($directPath) && is_file($directPath)) {
 }
 
 // Fallback to home page
-require __DIR__ . '/home.php';
+require __DIR__ . '/../index.php';

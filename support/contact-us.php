@@ -9,8 +9,8 @@ $telegramLink = 'https://t.me/25471380429';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frequently asked questions about Realtime Tips football predictions, payments, and services.">
-    <title>FAQ | Realtime Tips</title>
+    <meta name="description" content="Contact Realtime Tips for support, questions, or to get premium football tips. Available via WhatsApp, Telegram, and email.">
+    <title>Contact Us | Realtime Tips</title>
     <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <style>
         :root {
@@ -68,7 +68,7 @@ $telegramLink = 'https://t.me/25471380429';
         .nav-container {
             display: flex;
             justify-content: space-between;
-                    align-items: center;
+            align-items: center;
             padding: 0.75rem 0;
         }
 
@@ -195,89 +195,53 @@ $telegramLink = 'https://t.me/25471380429';
             max-width: 70ch;
         }
 
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .faq-item {
+        .contact-card {
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 1.5rem;
-            background: none;
-            border: none;
-            text-align: left;
-            cursor: pointer;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-main);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
-        }
-
-        .faq-question:hover {
-            background: rgba(37, 99, 235, 0.05);
-        }
-
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--accent);
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 1.5rem;
-            color: var(--text-soft);
-            line-height: 1.6;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding-bottom: 1.5rem;
-        }
-
-        .contact-cta {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: var(--card);
             border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
             box-shadow: var(--shadow-soft);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .contact-cta h4 {
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .contact-card h4 {
             margin: 0 0 1rem;
-            color: var(--primary);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
-        .contact-cta p {
+        .contact-card p {
             margin: 0 0 1.5rem;
             color: var(--text-soft);
         }
 
-        .btn {
+        .contact-link {
             display: inline-block;
-            padding: 0.9rem 1.5rem;
+            padding: 0.75rem 1.5rem;
             background: var(--accent);
             color: white;
             text-decoration: none;
@@ -286,8 +250,28 @@ $telegramLink = 'https://t.me/25471380429';
             transition: transform 0.2s;
         }
 
-        .btn:hover {
+        .contact-link:hover {
             transform: translateY(-2px);
+        }
+
+        .response-time {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .response-time h4 {
+            margin: 0 0 0.5rem;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .response-time p {
+            margin: 0;
+            color: var(--text-soft);
         }
 
         .footer {
@@ -302,30 +286,24 @@ $telegramLink = 'https://t.me/25471380429';
                 display: none;
             }
         }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
 
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
-            });
-        });
-    </script>
+        @media (max-width: 700px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="nav-wrap">
         <div class="container nav-container">
-            <a href="../home.php" class="nav-logo">
+            <a href="../index.php" class="nav-logo">
                 <span class="nav-logo-text">
                     <span>RT</span><span>Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../home.php" class="nav-link">Home</a>
+                <a href="../index.php" class="nav-link">Home</a>
                 <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Tips <span>▼</span></span>
@@ -345,85 +323,60 @@ $telegramLink = 'https://t.me/25471380429';
     <main>
         <section class="section">
             <div class="container">
-                <h3>Frequently Asked Questions</h3>
-                <p>Find answers to the most common questions about our football tips service.</p>
+                <h3>Contact Us</h3>
+                <p>Need help with payments, tips, or have questions? Get in touch with our support team. We're here to help!</p>
 
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <button class="faq-question">How accurate are your tips?</button>
-                        <div class="faq-answer">
-                            <p>Our tips have an average accuracy rate of 86% based on our track record. The Golden Fixed tips are our highest accuracy option at 45+ odds, while our 2+ odds daily tips provide consistent wins at more affordable prices.</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                            </svg>
                         </div>
+                        <h4>WhatsApp Support</h4>
+                        <p>Instant support for payments, tips, and questions. Available 24/7.</p>
+                        <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="contact-link">Message on WhatsApp</a>
                     </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">When are tips posted?</button>
-                        <div class="faq-answer">
-                            <p>Free daily tips are posted every morning. Premium tips are delivered via Telegram or WhatsApp. Early anticipation tips are posted hours before kickoff, giving you time to place bets at optimal odds.</p>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
                         </div>
+                        <h4>Telegram Channel</h4>
+                        <p>Join our community for daily tips and updates. Free and premium access.</p>
+                        <a href="<?= htmlspecialchars($telegramLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="contact-link">Join Telegram</a>
                     </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">What payment methods do you accept?</button>
-                        <div class="faq-answer">
-                            <p>We accept M-Pesa, Airtel Money, PayPal, and Skrill. Kenyan customers can use Buy Goods (Pay Till) for instant M-Pesa payments. International customers can use PayPal or Skrill.</p>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                         </div>
+                        <h4>Email Support</h4>
+                        <p>For detailed inquiries, partnerships, or business matters.</p>
+                        <a href="mailto:support@realtimetips.com" class="contact-link">Email Us</a>
                     </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">Do you offer a money-back guarantee?</button>
-                        <div class="faq-answer">
-                            <p>Yes! If our tips don't win as promised, we provide a full refund. We stand by our predictions and want you to be completely satisfied with our service.</p>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
                         </div>
+                        <h4>Live Chat</h4>
+                        <p>Real-time support through our website chat. Quick responses guaranteed.</p>
+                        <a href="#" class="contact-link">Start Chat</a>
                     </div>
+                </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">How do I receive the tips?</button>
-                        <div class="faq-answer">
-                            <p>After payment, you'll be added to our VIP Telegram channel or WhatsApp group where tips are posted. Free tips are available on our website and Telegram channel.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Are your tips legal?</button>
-                        <div class="faq-answer">
-                            <p>Yes, providing football tips and analysis is completely legal. We don't offer "sure wins" or guaranteed results - we provide expert predictions based on analysis and statistics.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Can I get tips for specific matches?</button>
-                        <div class="faq-answer">
-                            <p>Our packages include tips for the matches we analyze that day. We focus on high-quality predictions rather than quantity. If you have specific requests, contact us via WhatsApp.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">Do you tip on international leagues?</button>
-                        <div class="faq-answer">
-                            <p>Yes! We cover major leagues worldwide including Premier League, La Liga, Serie A, Bundesliga, Champions League, and more. Our international package is perfect for global bettors.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">What's the difference between your packages?</button>
-                        <div class="faq-answer">
-                            <p>Golden Fixed (45+ odds): Premium tips with highest accuracy. 2+ Odds Daily: Affordable daily tips. 2 Draw Games (15+ odds): Specialized draw predictions. Choose based on your budget and risk preference.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">How do I cancel my subscription?</button>
-                        <div class="faq-answer">
-                            <p>Our tips are pay-per-use, not subscriptions. Each package gives you access for that specific day. Contact us if you need any changes or have questions about payments.</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-cta">
-                        <h4>Still have questions?</h4>
-                        <p>Can't find what you're looking for? Our support team is here to help!</p>
-                        <a href="contact-us.php" class="btn">Contact Us</a>
-                    </div>
+                <div class="response-time">
+                    <h4>Response Times</h4>
+                    <p>WhatsApp & Telegram: Instant (24/7)<br>
+                    Email: Within 2-4 hours<br>
+                    Live Chat: Immediate during business hours</p>
                 </div>
             </div>
         </section>

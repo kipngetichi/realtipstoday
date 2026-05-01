@@ -9,8 +9,8 @@ $telegramLink = 'https://t.me/25471380429';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how Realtime Tips works - from free daily tips to premium VIP packages and international payments.">
-    <title>How It Works | Realtime Tips</title>
+    <meta name="description" content="Frequently asked questions about Realtime Tips football predictions, payments, and services.">
+    <title>FAQ | Realtime Tips</title>
     <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <style>
         :root {
@@ -68,7 +68,7 @@ $telegramLink = 'https://t.me/25471380429';
         .nav-container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+                    align-items: center;
             padding: 0.75rem 0;
         }
 
@@ -195,87 +195,99 @@ $telegramLink = 'https://t.me/25471380429';
             max-width: 70ch;
         }
 
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .step-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .step-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin: 0 auto 1rem;
-        }
-
-        .step-card h4 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .step-card p {
-            margin: 0;
-            color: var(--text-soft);
-            font-size: 0.95rem;
-        }
-
-        .features-section {
-            background: var(--bg-light);
-            padding: 3rem 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
+        .faq-item {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 2rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
             box-shadow: var(--shadow-soft);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .feature-card:hover {
-            transform: translateY(-4px);
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
         }
 
-        .feature-card h4 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
+        .faq-question:hover {
+            background: rgba(37, 99, 235, 0.05);
         }
 
-        .feature-card p {
-            margin: 0;
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
             color: var(--text-soft);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .contact-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .contact-cta h4 {
+            margin: 0 0 1rem;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .contact-cta p {
+            margin: 0 0 1.5rem;
+            color: var(--text-soft);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
         }
 
         .footer {
@@ -290,24 +302,30 @@ $telegramLink = 'https://t.me/25471380429';
                 display: none;
             }
         }
-
-        @media (max-width: 700px) {
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="nav-wrap">
         <div class="container nav-container">
-            <a href="../home.php" class="nav-logo">
+            <a href="../index.php" class="nav-logo">
                 <span class="nav-logo-text">
                     <span>RT</span><span>Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../home.php" class="nav-link">Home</a>
+                <a href="../index.php" class="nav-link">Home</a>
                 <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Tips <span>▼</span></span>
@@ -327,81 +345,84 @@ $telegramLink = 'https://t.me/25471380429';
     <main>
         <section class="section">
             <div class="container">
-                <h3>How It Works</h3>
-                <p>Getting started with Realtime Tips is simple. Follow these easy steps to start winning with our expert football predictions.</p>
+                <h3>Frequently Asked Questions</h3>
+                <p>Find answers to the most common questions about our football tips service.</p>
 
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h4>Check Free Daily Tips</h4>
-                        <p>Visit our homepage to see today's free tip. This helps you build trust in our predictions before upgrading.</p>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">How accurate are your tips?</button>
+                        <div class="faq-answer">
+                            <p>Our tips have an average accuracy rate of 86% based on our track record. The Golden Fixed tips are our highest accuracy option at 45+ odds, while our 2+ odds daily tips provide consistent wins at more affordable prices.</p>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h4>Choose Your Package</h4>
-                        <p>Select from Golden Fixed (45+ odds), 2+ odds daily, or 2 Draw Games based on your budget and preferences.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">When are tips posted?</button>
+                        <div class="faq-answer">
+                            <p>Free daily tips are posted every morning. Premium tips are delivered via Telegram or WhatsApp. Early anticipation tips are posted hours before kickoff, giving you time to place bets at optimal odds.</p>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h4>Make Payment</h4>
-                        <p>Use M-Pesa, Airtel Money, PayPal, or Skrill. Payments are processed instantly for immediate access.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">What payment methods do you accept?</button>
+                        <div class="faq-answer">
+                            <p>We accept M-Pesa, Airtel Money, PayPal, and Skrill. Kenyan customers can use Buy Goods (Pay Till) for instant M-Pesa payments. International customers can use PayPal or Skrill.</p>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h4>Receive Tips</h4>
-                        <p>Get tips delivered to your Telegram channel or WhatsApp. Early anticipation picks posted before kickoff.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer a money-back guarantee?</button>
+                        <div class="faq-answer">
+                            <p>Yes! If our tips don't win as promised, we provide a full refund. We stand by our predictions and want you to be completely satisfied with our service.</p>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">5</div>
-                        <h4>Start Winning</h4>
-                        <p>Place your bets and watch your profits grow. Our expert team ensures consistent results.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">How do I receive the tips?</button>
+                        <div class="faq-answer">
+                            <p>After payment, you'll be added to our VIP Telegram channel or WhatsApp group where tips are posted. Free tips are available on our website and Telegram channel.</p>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">6</div>
-                        <h4>Repeat Success</h4>
-                        <p>Subscribe monthly or as needed. Money-back guarantee if tips don't deliver as promised.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features-section">
-            <div class="container">
-                <h3>Why Choose Realtime Tips?</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>Expert Analysis</h4>
-                        <p>Our professional tipsters analyze thousands of matches weekly using advanced statistics and insider knowledge.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">Are your tips legal?</button>
+                        <div class="faq-answer">
+                            <p>Yes, providing football tips and analysis is completely legal. We don't offer "sure wins" or guaranteed results - we provide expert predictions based on analysis and statistics.</p>
+                        </div>
                     </div>
 
-                    <div class="feature-card">
-                        <h4>Early Access</h4>
-                        <p>Get tips hours before kickoff, giving you time to place bets at the best odds across different bookmakers.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I get tips for specific matches?</button>
+                        <div class="faq-answer">
+                            <p>Our packages include tips for the matches we analyze that day. We focus on high-quality predictions rather than quantity. If you have specific requests, contact us via WhatsApp.</p>
+                        </div>
                     </div>
 
-                    <div class="feature-card">
-                        <h4>Proven Track Record</h4>
-                        <p>86% accuracy rate with thousands of satisfied customers. Check our testimonials for real success stories.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you tip on international leagues?</button>
+                        <div class="faq-answer">
+                            <p>Yes! We cover major leagues worldwide including Premier League, La Liga, Serie A, Bundesliga, Champions League, and more. Our international package is perfect for global bettors.</p>
+                        </div>
                     </div>
 
-                    <div class="feature-card">
-                        <h4>Flexible Pricing</h4>
-                        <p>From affordable 2+ odds at Ksh 100 to premium Golden Fixed at Ksh 525. International payments accepted.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">What's the difference between your packages?</button>
+                        <div class="faq-answer">
+                            <p>Golden Fixed (45+ odds): Premium tips with highest accuracy. 2+ Odds Daily: Affordable daily tips. 2 Draw Games (15+ odds): Specialized draw predictions. Choose based on your budget and risk preference.</p>
+                        </div>
                     </div>
 
-                    <div class="feature-card">
-                        <h4>Money-Back Guarantee</h4>
-                        <p>If our tips don't win, we refund your payment. No risk, only potential profits.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">How do I cancel my subscription?</button>
+                        <div class="faq-answer">
+                            <p>Our tips are pay-per-use, not subscriptions. Each package gives you access for that specific day. Contact us if you need any changes or have questions about payments.</p>
+                        </div>
                     </div>
 
-                    <div class="feature-card">
-                        <h4>24/7 Support</h4>
-                        <p>Contact us anytime via WhatsApp or Telegram for assistance with payments, tips, or any questions.</p>
+                    <div class="contact-cta">
+                        <h4>Still have questions?</h4>
+                        <p>Can't find what you're looking for? Our support team is here to help!</p>
+                        <a href="contact-us.php" class="btn">Contact Us</a>
                     </div>
                 </div>
             </div>

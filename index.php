@@ -2569,11 +2569,11 @@ body {
 <body>
     <nav class="nav-wrap">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="home.php" class="nav-logo">
+            <a href="index.php" class="nav-logo">
                 <span class="nav-logo-text"><span>Realtime</span><span>Tips</span></span>
             </a>
             <div class="nav-menu">
-                <a href="home.php" class="nav-link">Home</a>
+                <a href="index.php" class="nav-link">Home</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Premium Tips <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3L5 7L9 3" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
                     <div class="nav-dropdown-menu">
@@ -2595,7 +2595,7 @@ body {
 
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-        <a href="home.php" class="mobile-home">Home</a>
+        <a href="index.php" class="mobile-home">Home</a>
         <div class="nav-dropdown-toggle" id="mobilePremiumToggle">Premium Tips</div>
         <div class="mobile-dropdown" id="mobilePremiumDropdown">
             <a href="Tips/goldentips.php">Golden Fixed (45+ odds)</a>
@@ -3116,7 +3116,7 @@ body {
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Quick Links</h4>
-                        <a href="home.php">Home</a>
+                        <a href="index.php">Home</a>
                         <a href="#">About Us</a>
                         <a href="support/how-it-works.php">How It Works</a>
                         <a href="testimonial/index.php">Success Stories</a>

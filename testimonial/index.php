@@ -9,8 +9,8 @@ $telegramLink = 'https://t.me/25471380429';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Realtime Tips for support, questions, or to get premium football tips. Available via WhatsApp, Telegram, and email.">
-    <title>Contact Us | Realtime Tips</title>
+    <meta name="description" content="Read testimonials from our satisfied customers who have benefited from Realtime Tips football predictions.">
+    <title>Testimonials | Realtime Tips</title>
     <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <style>
         :root {
@@ -190,88 +190,78 @@ $telegramLink = 'https://t.me/25471380429';
         }
 
         .section p {
-            margin: 0 0 1.5rem;
+            margin: 0;
             color: var(--text-soft);
             max-width: 70ch;
         }
 
-        .contact-grid {
+        .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .contact-card {
+        .testimonial-card {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: 2rem;
-            text-align: center;
             box-shadow: var(--shadow-soft);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .contact-card:hover {
+        .testimonial-card:hover {
             transform: translateY(-4px);
         }
 
-        .contact-icon {
-            width: 60px;
-            height: 60px;
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            top: -0.5rem;
+            left: -1rem;
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
             color: white;
-        }
-
-        .contact-card h4 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .contact-card p {
-            margin: 0 0 1.5rem;
-            color: var(--text-soft);
-        }
-
-        .contact-link {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            transition: transform 0.2s;
-        }
-
-        .contact-link:hover {
-            transform: translateY(-2px);
-        }
-
-        .response-time {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .response-time h4 {
-            margin: 0 0 0.5rem;
-            color: var(--accent);
+            font-weight: 900;
             font-size: 1.2rem;
         }
 
-        .response-time p {
+        .author-info h4 {
             margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .author-info small {
             color: var(--text-soft);
+            font-weight: 600;
         }
 
         .footer {
@@ -288,7 +278,7 @@ $telegramLink = 'https://t.me/25471380429';
         }
 
         @media (max-width: 700px) {
-            .contact-grid {
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -297,14 +287,13 @@ $telegramLink = 'https://t.me/25471380429';
 <body>
     <nav class="nav-wrap">
         <div class="container nav-container">
-            <a href="../home.php" class="nav-logo">
+            <a href="../index.php" class="nav-logo">
                 <span class="nav-logo-text">
                     <span>RT</span><span>Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../home.php" class="nav-link">Home</a>
-                <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
+                <a href="../index.php" class="nav-link">Home</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Tips <span>▼</span></span>
                     <div class="nav-dropdown-menu">
@@ -314,7 +303,7 @@ $telegramLink = 'https://t.me/25471380429';
                     </div>
                 </div>
                 <a href="../international-payment.php" class="nav-link">International</a>
-                <a href="#" class="nav-link">Support</a>
+                <a href="#" class="nav-link">Testimonials</a>
             </div>
             <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="nav-cta">Get Tips Now</a>
         </div>
@@ -323,60 +312,87 @@ $telegramLink = 'https://t.me/25471380429';
     <main>
         <section class="section">
             <div class="container">
-                <h3>Contact Us</h3>
-                <p>Need help with payments, tips, or have questions? Get in touch with our support team. We're here to help!</p>
+                <h3>What Our Customers Say</h3>
+                <p>Don't just take our word for it. Here's what our satisfied customers have to say about Realtime Tips.</p>
 
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-                            </svg>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "I've been using Realtime Tips for 6 months now and my betting profits have increased significantly. The early anticipation tips are game-changers!"
                         </div>
-                        <h4>WhatsApp Support</h4>
-                        <p>Instant support for payments, tips, and questions. Available 24/7.</p>
-                        <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="contact-link">Message on WhatsApp</a>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div class="author-info">
+                                <h4>John M.</h4>
+                                <small>Nairobi, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                            </svg>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "The free daily tips helped me build trust, and now I'm a premium subscriber. Worth every shilling!"
                         </div>
-                        <h4>Telegram Channel</h4>
-                        <p>Join our community for daily tips and updates. Free and premium access.</p>
-                        <a href="<?= htmlspecialchars($telegramLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="contact-link">Join Telegram</a>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sarah K.</h4>
+                                <small>Mombasa, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Consistent winners with the Golden Fixed Tips. My go-to source for football predictions now."
                         </div>
-                        <h4>Email Support</h4>
-                        <p>For detailed inquiries, partnerships, or business matters.</p>
-                        <a href="mailto:support@realtimetips.com" class="contact-link">Email Us</a>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Michael T.</h4>
+                                <small>Eldoret, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                            </svg>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "International payments work perfectly. I'm from Uganda and love the service. Highly recommended!"
                         </div>
-                        <h4>Live Chat</h4>
-                        <p>Real-time support through our website chat. Quick responses guaranteed.</p>
-                        <a href="#" class="contact-link">Start Chat</a>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anna P.</h4>
+                                <small>Kampala, Uganda</small>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="response-time">
-                    <h4>Response Times</h4>
-                    <p>WhatsApp & Telegram: Instant (24/7)<br>
-                    Email: Within 2-4 hours<br>
-                    Live Chat: Immediate during business hours</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "The 2+ odds daily tips are amazing. Affordable and profitable. Been winning consistently."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div class="author-info">
+                                <h4>David L.</h4>
+                                <small>Nakuru, Kenya</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Great customer support and timely tips. The Telegram channel keeps me updated. 5 stars!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div class="author-info">
+                                <h4>Emily W.</h4>
+                                <small>Nairobi, Kenya</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
