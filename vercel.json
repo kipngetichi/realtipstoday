@@ -3,13 +3,28 @@
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
   "functions": {
-    "api/**/*.php": {
-      "runtime": "vercel-php"
+    "**/*.php": {
+      "runtime": "vercel-php@0.5.0"
     }
   },
   "routes": [
-    { "src": "/international-payment\\.php", "dest": "/api/international-payment.php" },
-    { "src": "/international-usd\\.php", "dest": "/api/international-usd.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/international-payment.php", "dest": "/api/international-payment.php" },
+    { "src": "/international-usd.php", "dest": "/api/international-usd.php" },
+    { "src": "/stkpush.php", "dest": "/M-PESAstkpush/stkpush.php" },
+    { "src": "/stkpush2draws.php", "dest": "/M-PESAstkpush/stkpush2draws.php" },
+    { "src": "/stkpush2odds.php", "dest": "/M-PESAstkpush/stkpush2odds.php" },
+    { "src": "/2draws.php", "dest": "/Tips/2draws.php" },
+    { "src": "/2odds.php", "dest": "/Tips/2odds.php" },
+    { "src": "/goldentips.php", "dest": "/Tips/goldentips.php" },
+    { "src": "/contact-us.php", "dest": "/support/contact-us.php" },
+    { "src": "/faq.php", "dest": "/support/faq.php" },
+    { "src": "/how-it-works.php", "dest": "/support/how-it-works.php" },
+    { "src": "/testimonial", "dest": "/testimonial/index.php" },
+    { "src": "/testimonial/", "dest": "/testimonial/index.php" },
+    { "src": "/jackpot", "dest": "/Jptips/index.php" },
+    { "src": "/jackpot/", "dest": "/Jptips/index.php" },
+    { "src": "/Jptips", "dest": "/Jptips/index.php" },
+    { "src": "/Jptips/", "dest": "/Jptips/index.php" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }

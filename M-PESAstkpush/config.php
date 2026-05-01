@@ -12,19 +12,21 @@ declare(strict_types=1);
  */
 
 return [
-    // API Credentials from Safaricom Daraja Portal
-    'consumer_key' => 'YOUR_CONSUMER_KEY',           // Get from https://developer.safaricom.co.ke/
-    'consumer_secret' => 'YOUR_CONSUMER_SECRET',     // Get from https://developer.safaricom.co.ke/
-    'passkey' => 'YOUR_PASSKEY',                     // Get from Safaricom Daraja portal (MPESA Express Passkey)
-    
-    // Your Business Details
-    'business_short_code' => '5438677',              // Your Pay Till / Business Number
-    'callback_url' => 'https://yourdomain.com/M-PESAstkpush/callback.php', // Your callback URL (must be HTTPS)
-    
-    // Environment: 'sandbox' or 'production'
-    'environment' => 'sandbox',
-    
-    // API URLs
+    // API Credentials - Use environment variables on Vercel or edit these values directly
+    'consumer_key' => getenv('MPESA_CONSUMER_KEY') ?: 'YOUR_CONSUMER_KEY',
+    'consumer_secret' => getenv('MPESA_CONSUMER_SECRET') ?: 'YOUR_CONSUMER_SECRET',
+    'passkey' => getenv('MPESA_PASSKEY') ?: 'YOUR_PASSKEY',
+
+    // Your Business Details (set MPESA_BUSINESS_SHORT_CODE env var or edit here)
+    'business_short_code' => getenv('MPESA_BUSINESS_SHORT_CODE') ?: '5438677',
+
+    // Callback URL - Must be HTTPS. Set MPESA_CALLBACK_URL env var for Vercel deployment
+    'callback_url' => getenv('MPESA_CALLBACK_URL') ?: 'https://yourdomain.com/M-PESAstkpush/callback.php',
+
+    // Environment: 'sandbox' or 'production' (set MPESA_ENVIRONMENT env var)
+    'environment' => getenv('MPESA_ENVIRONMENT') ?: 'sandbox',
+
+    // API URLs (do not modify unless necessary)
     'api_urls' => [
         'sandbox' => [
             'auth' => 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials',

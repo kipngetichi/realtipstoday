@@ -3,8 +3,11 @@ declare(strict_types=1);
 
 // MPESA STK Push Callback Handler
 
+// Use /tmp for logging on Vercel (read-only filesystem elsewhere)
+$logDir = sys_get_temp_dir();
+$logFile = $logDir . '/mpesa_callback.log';
+
 // Log the callback for debugging
-$logFile = __DIR__ . '/mpesa_callback.log';
 $callbackData = file_get_contents('php://input');
 $logEntry = date('Y-m-d H:i:s') . ' - ' . $callbackData . PHP_EOL;
 file_put_contents($logFile, $logEntry, FILE_APPEND);
@@ -54,7 +57,7 @@ header('Content-Type: application/json');
 
 if ($isSuccess) {
     // Log successful payment
-    $successLog = __DIR__ . '/mpesa_success.log';
+    $successLog = $logDir . '/mpesa_success.log';
     $successEntry = date('Y-m-d H:i:s') . ' - Payment successful: ' . json_encode([
         'transID' => $transID,
         'amount' => $transAmount,
@@ -62,17 +65,17 @@ if ($isSuccess) {
         'reference' => $billRefNumber
     ]) . PHP_EOL;
     file_put_contents($successLog, $successEntry, FILE_APPEND);
-    
+
     echo json_encode([
         'ResultCode' => 0,
         'ResultDesc' => 'Payment received successfully'
     ]);
 } else {
     // Log failed payment
-    $errorLog = __DIR__ . '/mpesa_errors.log';
+    $errorLog = $logDir . '/mpesa_errors.log';
     $errorEntry = date('Y-m-d H:i:s') . ' - Payment failed: ' . $resultDesc . ' - ' . $callbackData . PHP_EOL;
     file_put_contents($errorLog, $errorEntry, FILE_APPEND);
-    
+
     echo json_encode([
         'ResultCode' => $resultCode,
         'ResultDesc' => 'Payment processed'
