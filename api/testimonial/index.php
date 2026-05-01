@@ -9,8 +9,8 @@ $telegramLink = 'https://t.me/25471380429';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how Realtime Tips works - from free daily tips to premium VIP packages and international payments.">
-    <title>How It Works | Realtime Tips</title>
+    <meta name="description" content="Read testimonials from our satisfied customers who have benefited from Realtime Tips football predictions.">
+    <title>Testimonials | Realtime Tips</title>
     <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <style>
         :root {
@@ -190,92 +190,78 @@ $telegramLink = 'https://t.me/25471380429';
         }
 
         .section p {
-            margin: 0 0 1.5rem;
+            margin: 0;
             color: var(--text-soft);
             max-width: 70ch;
         }
 
-        .steps-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .step-card {
+        .testimonial-card {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: 2rem;
-            text-align: center;
             box-shadow: var(--shadow-soft);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .step-card:hover {
+        .testimonial-card:hover {
             transform: translateY(-4px);
         }
 
-        .step-number {
-            width: 60px;
-            height: 60px;
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            top: -0.5rem;
+            left: -1rem;
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent), var(--primary));
-            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            color: white;
             font-weight: 900;
-            margin: 0 auto 1rem;
-        }
-
-        .step-card h4 {
-            margin: 0 0 1rem;
             font-size: 1.2rem;
-            font-weight: 700;
         }
 
-        .step-card p {
+        .author-info h4 {
             margin: 0;
-            color: var(--text-soft);
-            font-size: 0.95rem;
-        }
-
-        .features-section {
-            background: var(--bg-light);
-            padding: 3rem 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .feature-card h4 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--text-main);
         }
 
-        .feature-card p {
-            margin: 0;
+        .author-info small {
             color: var(--text-soft);
+            font-weight: 600;
         }
 
         .footer {
@@ -292,7 +278,7 @@ $telegramLink = 'https://t.me/25471380429';
         }
 
         @media (max-width: 700px) {
-            .steps-grid {
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -301,14 +287,13 @@ $telegramLink = 'https://t.me/25471380429';
 <body>
     <nav class="nav-wrap">
         <div class="container nav-container">
-            <a href="../index.php" class="nav-logo">
+            <a href="../home.php" class="nav-logo">
                 <span class="nav-logo-text">
                     <span>RT</span><span>Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../index.php" class="nav-link">Home</a>
-                <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
+                <a href="../home.php" class="nav-link">Home</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Tips <span>▼</span></span>
                     <div class="nav-dropdown-menu">
@@ -318,7 +303,7 @@ $telegramLink = 'https://t.me/25471380429';
                     </div>
                 </div>
                 <a href="../international-payment.php" class="nav-link">International</a>
-                <a href="#" class="nav-link">Support</a>
+                <a href="#" class="nav-link">Testimonials</a>
             </div>
             <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="nav-cta">Get Tips Now</a>
         </div>
@@ -327,81 +312,86 @@ $telegramLink = 'https://t.me/25471380429';
     <main>
         <section class="section">
             <div class="container">
-                <h3>How It Works</h3>
-                <p>Getting started with Realtime Tips is simple. Follow these easy steps to start winning with our expert football predictions.</p>
+                <h3>What Our Customers Say</h3>
+                <p>Don't just take our word for it. Here's what our satisfied customers have to say about Realtime Tips.</p>
 
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h4>Check Free Daily Tips</h4>
-                        <p>Visit our homepage to see today's free tip. This helps you build trust in our predictions before upgrading.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "I've been using Realtime Tips for 6 months now and my betting profits have increased significantly. The early anticipation tips are game-changers!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div class="author-info">
+                                <h4>John M.</h4>
+                                <small>Nairobi, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h4>Choose Your Package</h4>
-                        <p>Select from Golden Fixed (45+ odds), 2+ odds daily, or 2 Draw Games based on your budget and preferences.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "The free daily tips helped me build trust, and now I'm a premium subscriber. Worth every shilling!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sarah K.</h4>
+                                <small>Mombasa, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h4>Make Payment</h4>
-                        <p>Use M-Pesa, Airtel Money, PayPal, or Skrill. Payments are processed instantly for immediate access.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Consistent winners with the Golden Fixed Tips. My go-to source for football predictions now."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Michael T.</h4>
+                                <small>Eldoret, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h4>Receive Tips</h4>
-                        <p>Get tips delivered to your Telegram channel or WhatsApp. Early anticipation picks posted before kickoff.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "International payments work perfectly. I'm from Uganda and love the service. Highly recommended!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anna P.</h4>
+                                <small>Kampala, Uganda</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">5</div>
-                        <h4>Start Winning</h4>
-                        <p>Place your bets and watch your profits grow. Our expert team ensures consistent results.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "The 2+ odds daily tips are amazing. Affordable and profitable. Been winning consistently."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div class="author-info">
+                                <h4>David L.</h4>
+                                <small>Nakuru, Kenya</small>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="step-card">
-                        <div class="step-number">6</div>
-                        <h4>Repeat Success</h4>
-                        <p>Subscribe monthly or as needed. Money-back guarantee if tips don't deliver as promised.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features-section">
-            <div class="container">
-                <h3>Why Choose Realtime Tips?</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>Expert Analysis</h4>
-                        <p>Our professional tipsters analyze thousands of matches weekly using advanced statistics and insider knowledge.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>Early Access</h4>
-                        <p>Get tips hours before kickoff, giving you time to place bets at the best odds across different bookmakers.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>Proven Track Record</h4>
-                        <p>86% accuracy rate with thousands of satisfied customers. Check our testimonials for real success stories.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>Flexible Pricing</h4>
-                        <p>From affordable 2+ odds at Ksh 100 to premium Golden Fixed at Ksh 525. International payments accepted.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>Money-Back Guarantee</h4>
-                        <p>If our tips don't win, we refund your payment. No risk, only potential profits.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h4>24/7 Support</h4>
-                        <p>Contact us anytime via WhatsApp or Telegram for assistance with payments, tips, or any questions.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Great customer support and timely tips. The Telegram channel keeps me updated. 5 stars!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div class="author-info">
+                                <h4>Emily W.</h4>
+                                <small>Nairobi, Kenya</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

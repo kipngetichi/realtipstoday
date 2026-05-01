@@ -437,13 +437,13 @@ $telegramLink = 'https://t.me/25471380429';
 <body>
     <nav class="nav-wrap">
         <div class="container nav-container">
-            <a href="../index.php" class="nav-logo">
+            <a href="../home.php" class="nav-logo">
                 <span class="nav-logo-text">
                     <span>RT</span><span>Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../index.php" class="nav-link">Home</a>
+                <a href="../home.php" class="nav-link">Home</a>
                 <a href="../testimonial/index.php" class="nav-link">Testimonials</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-toggle">Tips <span>▼</span></span>

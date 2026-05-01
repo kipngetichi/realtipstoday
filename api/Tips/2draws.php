@@ -615,13 +615,13 @@ $telegramLink = 'https://t.me/25471380429';
 <body>
     <nav class="nav-wrap">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="../index.php" class="nav-logo">
+            <a href="../home.php" class="nav-logo">
                 <span style="font-size: 1.4rem; font-weight: 900; letter-spacing: -0.5px;">
                     <span style="color: #10b981;">Realtime</span><span style="color: white;">Tips</span>
                 </span>
             </a>
             <div class="nav-menu">
-                <a href="../index.php" class="nav-link" style="color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 600;">Home</a>
+                <a href="../home.php" class="nav-link" style="color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 600;">Home</a>
             </div>
         </div>
     </nav>
@@ -649,7 +649,7 @@ $telegramLink = 'https://t.me/25471380429';
 
     <main>
         <div class="container">
-            <a href="../index.php" class="back-link">&larr; Back to Home</a>
+            <a href="../home.php" class="back-link">&larr; Back to Home</a>
 
             <section class="trust-section">
                 <div class="trust-box">
@@ -799,7 +799,7 @@ $telegramLink = 'https://t.me/25471380429';
             <div class="footer-bottom">
                 <p>&copy; <?= date('Y') ?> Realtime Tips. All rights reserved.</p>
                 <div>
-                    <a href="../index.php">Home</a>
+                    <a href="../home.php">Home</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Contact</a>
                 </div>
