@@ -4,8 +4,33 @@
   "outputDirectory": ".",
   "functions": {
     "**/*.php": {
-      "runtime": "vercel-php@0.5.0"
+      "runtime": "vercel-php@0.7.1"
     }
+  },
+  "routes": [
+    { "src": "/international-payment.php", "dest": "/api/international-payment.php" },
+    { "src": "/international-usd.php", "dest": "/api/international-usd.php" },
+    { "src": "/stkpush.php", "dest": "/M-PESAstkpush/stkpush.php" },
+    { "src": "/stkpush2draws.php", "dest": "/M-PESAstkpush/stkpush2draws.php" },
+    { "src": "/stkpush2odds.php", "dest": "/M-PESAstkpush/stkpush2odds.php" },
+    { "src": "/2draws.php", "dest": "/Tips/2draws.php" },
+    { "src": "/2odds.php", "dest": "/Tips/2odds.php" },
+    { "src": "/goldentips.php", "dest": "/Tips/goldentips.php" },
+    { "src": "/contact-us.php", "dest": "/support/contact-us.php" },
+    { "src": "/faq.php", "dest": "/support/faq.php" },
+    { "src": "/how-it-works.php", "dest": "/support/how-it-works.php" },
+    { "src": "/testimonial", "dest": "/testimonial/index.php" },
+    { "src": "/testimonial/", "dest": "/testimonial/index.php" },
+    { "src": "/jackpot", "dest": "/Jptips/index.php" },
+    { "src": "/jackpot/", "dest": "/Jptips/index.php" },
+    { "src": "/Jptips", "dest": "/Jptips/index.php" },
+    { "src": "/Jptips/", "dest": "/Jptips/index.php" },
+    { "src": "/api/callback.php", "dest": "/M-PESAstkpush/callback.php" },
+    { "src": "/callback.php", "dest": "/M-PESAstkpush/callback.php" },
+    { "src": "/", "dest": "/index.php" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
   },
   "routes": [
     { "src": "/international-payment.php", "dest": "/api/international-payment.php" },
