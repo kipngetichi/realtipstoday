@@ -13,7 +13,7 @@ if ($requestPath !== '/' && str_ends_with($requestPath, '/')) {
 
 // Map routes to file paths
 $routes = [
-    '/' => '../index.php',
+    '/' => '/index.php',
     '/index.php' => '../index.php',
     '/2draws.php' => 'Tips/2draws.php',
     '/2odds.php' => 'Tips/2odds.php',
