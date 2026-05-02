@@ -7,9 +7,9 @@ $telegramLink = 'https://t.me/25471380429';
 $defaultFreeTipDate = date('l, F j, Y');
 
 // User settings
-$freeTipMatchTitle = 'Aston Villa v Bologna FC';
-$freeTipLabel = 'Tip 1';
-$freeTipTime = '7:00 PM';
+$freeTipMatchTitle = 'NEC Nijmegen v SC Telstar';
+$freeTipLabel = 'Tip GG';
+$freeTipTime = '22:00 PM';
 $freeTipPostedToLabel = 'Telegram Channel';
 ?>
 <!DOCTYPE html>
