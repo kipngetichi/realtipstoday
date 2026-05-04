@@ -11,22 +11,22 @@ if ($requestPath !== '/' && str_ends_with($requestPath, '/')) {
 
 // Map routes to files
 $routes = [
-    '/' => '../index.php',
-    '/index.php' => '../index.php',
-    '/2draws.php' => '../2draws.php',
-    '/2odds.php' => '../2odds.php',
-    '/goldentips.php' => '../goldentips.php',
-    '/contact-us.php' => '../support/contact-us.php',
-    '/faq.php' => '../support/faq.php',
-    '/how-it-works.php' => '../support/how-it-works.php',
-    '/testimonial' => '../testimonial/index.php',
-    '/testimonial/' => '../testimonial/index.php',
-    '/jackpot' => '../Jptips/index.php',
-    '/jackpot/' => '../Jptips/index.php',
-    '/Jptips' => '../Jptips/index.php',
-    '/Jptips/' => '../Jptips/index.php',
-    '/international-payment.php' => '../international-payment.php',
-    '/international-usd.php' => '../international-usd.php',
+    '/' => '../index.html',
+    '/index.html' => '../index.html',
+    '/2draws.html' => '../Tips/2draws.html',
+    '/2odds.html' => '../Tips/2odds.html',
+    '/goldentips.html' => '../Tips/goldentips.html',
+    '/contact-us.html' => '../support/contact-us.html',
+    '/faq.html' => '../support/faq.html',
+    '/how-it-works.html' => '../support/how-it-works.html',
+    '/testimonial' => '../testimonial/index.html',
+    '/testimonial/' => '../testimonial/index.html',
+    '/jackpot' => '../Jptips/index.html',
+    '/jackpot/' => '../Jptips/index.html',
+    '/Jptips' => '../Jptips/index.html',
+    '/Jptips/' => '../Jptips/index.html',
+    '/international-payment.html' => '../international-payment.html',
+    '/international-usd.html' => '../international-usd.html',
     '/callback.php' => '../M-PESAstkpush/callback.php',
     '/stkpush.php' => '../M-PESAstkpush/stkpush.php',
     '/stkpush2draws.php' => '../M-PESAstkpush/stkpush2draws.php',
@@ -43,10 +43,12 @@ if (isset($routes[$requestPath])) {
 
 // Try direct file
 $directPath = __DIR__ . '/../' . ltrim($requestPath, '/');
-if (file_exists($directPath) && is_file($directPath) && str_ends_with($requestPath, '.php')) {
-    require $directPath;
-    exit;
+if (file_exists($directPath) && is_file($directPath)) {
+    if (str_ends_with($requestPath, '.php') || str_ends_with($requestPath, '.html')) {
+        require $directPath;
+        exit;
+    }
 }
 
 // Fallback
-require __DIR__ . '/../index.php';
+require __DIR__ . '/../index.html';
