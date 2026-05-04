@@ -8,6 +8,7 @@
     }
   },
   "routes": [
+    { "src": "/index.html", "dest": "/api/index.php" },
     { "src": "/international-payment.html", "dest": "/api/index.php" },
     { "src": "/international-usd.html", "dest": "/api/index.php" },
     { "src": "/callback.php", "dest": "/api/index.php" },
@@ -26,7 +27,6 @@
     { "src": "/jackpot/", "dest": "/api/index.php" },
     { "src": "/Jptips", "dest": "/api/index.php" },
     { "src": "/Jptips/", "dest": "/api/index.php" },
-    { "src": "/", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/", "dest": "/api/index.php" }
   ]
 }
