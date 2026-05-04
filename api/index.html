@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Route mapping
+        const routes = {
+            '/': '/index.html',
+            '/index.html': '/index.html',
+            '/2draws.html': '/Tips/2draws.html',
+            '/2odds.html': '/Tips/2odds.html',
+            '/goldentips.html': '/Tips/goldentips.html',
+            '/contact-us.html': '/support/contact-us.html',
+            '/faq.html': '/support/faq.html',
+            '/how-it-works.html': '/support/how-it-works.html',
+            '/testimonial': '/testimonial/index.html',
+            '/testimonial/': '/testimonial/index.html',
+            '/jackpot': '/Jptips/index.html',
+            '/jackpot/': '/Jptips/index.html',
+            '/Jptips': '/Jptips/index.html',
+            '/Jptips/': '/Jptips/index.html',
+            '/international-payment.html': '/international-payment.html',
+            '/international-usd.html': '/international-usd.html',
+            '/callback.php': '/M-PESAstkpush/callback.php',
+            '/stkpush.php': '/M-PESAstkpush/stkpush.php',
+            '/stkpush2draws.php': '/M-PESAstkpush/stkpush2draws.php',
+            '/stkpush2odds.php': '/M-PESAstkpush/stkpush2odds.php'
+        };
+
+        // Get current path
+        let path = window.location.pathname;
+        
+        // Remove trailing slash (except for root)
+        if (path !== '/' && path.endsWith('/')) {
+            path = path.slice(0, -1);
+        }
+
+        // Find route
+        let target = routes[path];
+        
+        // If no exact match, try to serve file directly
+        if (!target) {
+            // Check if it's a PHP file
+            if (path.endsWith('.php')) {
+                target = path;
+            } else if (path.endsWith('.html')) {
+                target = path;
+            } else {
+                // Default to home
+                target = '/index.html';
+            }
+        }
+
+        // Redirect
+        window.location.href = target;
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

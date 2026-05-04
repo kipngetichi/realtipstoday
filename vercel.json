@@ -2,31 +2,26 @@
   "version": 2,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.7.1"
-    }
-  },
   "routes": [
-    { "src": "/index.html", "dest": "/api/index.php" },
-    { "src": "/international-payment.html", "dest": "/api/index.php" },
-    { "src": "/international-usd.html", "dest": "/api/index.php" },
-    { "src": "/callback.php", "dest": "/api/index.php" },
-    { "src": "/stkpush.php", "dest": "/api/index.php" },
-    { "src": "/stkpush2draws.php", "dest": "/api/index.php" },
-    { "src": "/stkpush2odds.php", "dest": "/api/index.php" },
-    { "src": "/2draws.html", "dest": "/api/index.php" },
-    { "src": "/2odds.html", "dest": "/api/index.php" },
-    { "src": "/goldentips.html", "dest": "/api/index.php" },
-    { "src": "/contact-us.html", "dest": "/api/index.php" },
-    { "src": "/faq.html", "dest": "/api/index.php" },
-    { "src": "/how-it-works.html", "dest": "/api/index.php" },
-    { "src": "/testimonial", "dest": "/api/index.php" },
-    { "src": "/testimonial/", "dest": "/api/index.php" },
-    { "src": "/jackpot", "dest": "/api/index.php" },
-    { "src": "/jackpot/", "dest": "/api/index.php" },
-    { "src": "/Jptips", "dest": "/api/index.php" },
-    { "src": "/Jptips/", "dest": "/api/index.php" },
-    { "src": "/", "dest": "/api/index.php" }
+    { "src": "/international-payment.html", "dest": "/api/index.html" },
+    { "src": "/international-usd.html", "dest": "/api/index.html" },
+    { "src": "/callback.php", "dest": "/api/index.html" },
+    { "src": "/stkpush.php", "dest": "/api/index.html" },
+    { "src": "/stkpush2draws.php", "dest": "/api/index.html" },
+    { "src": "/stkpush2odds.php", "dest": "/api/index.html" },
+    { "src": "/2draws.html", "dest": "/api/index.html" },
+    { "src": "/2odds.html", "dest": "/api/index.html" },
+    { "src": "/goldentips.html", "dest": "/api/index.html" },
+    { "src": "/contact-us.html", "dest": "/api/index.html" },
+    { "src": "/faq.html", "dest": "/api/index.html" },
+    { "src": "/how-it-works.html", "dest": "/api/index.html" },
+    { "src": "/testimonial", "dest": "/api/index.html" },
+    { "src": "/testimonial/", "dest": "/api/index.html" },
+    { "src": "/jackpot", "dest": "/api/index.html" },
+    { "src": "/jackpot/", "dest": "/api/index.html" },
+    { "src": "/Jptips", "dest": "/api/index.html" },
+    { "src": "/Jptips/", "dest": "/api/index.html" },
+    { "src": "/", "dest": "/api/index.html" },
+    { "src": "/(.*)", "dest": "/api/index.html" }
   ]
 }
