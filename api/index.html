@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Realtime Tips</title>
     <script>
-        // Route mapping
+        // Route mapping - only redirect for specific paths
         const routes = {
-            '/': '/index.html',
-            '/index.html': '/index.html',
             '/2draws.html': '/Tips/2draws.html',
             '/2odds.html': '/Tips/2odds.html',
             '/goldentips.html': '/Tips/goldentips.html',
@@ -37,27 +35,24 @@
             path = path.slice(0, -1);
         }
 
-        // Find route
-        let target = routes[path];
-        
-        // If no exact match, try to serve file directly
-        if (!target) {
-            // Check if it's a PHP file
-            if (path.endsWith('.php')) {
-                target = path;
-            } else if (path.endsWith('.html')) {
-                target = path;
-            } else {
-                // Default to home
-                target = '/index.html';
+        // If root, serve index.html directly (no redirect needed)
+        if (path === '/' || path === '/index.html') {
+            // We're already at the right place, let the page load
+            // Just make sure we're not in a redirect loop
+            if (window.location.pathname === '/api/index.html') {
+                window.location.href = '/index.html';
             }
+            // Otherwise, let the page render normally
+        } else if (routes[path]) {
+            // Redirect to mapped route
+            window.location.href = routes[path];
+        } else {
+            // Unknown path - redirect to home
+            window.location.href = '/index.html';
         }
-
-        // Redirect
-        window.location.href = target;
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <p>Loading...</p>
 </body>
 </html>
