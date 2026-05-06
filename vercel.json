@@ -23,6 +23,8 @@
     { "src": "/Jptips/", "dest": "/Jptips/index.html" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/index.html", "dest": "/index.html" },
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/(.*)\\.(js|css|png|jpg|jpeg|svg|gif|webp|ico)", "dest": "/$1.$2" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
