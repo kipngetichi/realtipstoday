@@ -2,6 +2,7 @@
   "version": 2,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
+  "cleanUrls": true,
   "routes": [
     { "src": "/international-payment.html", "dest": "/international-payment.html" },
     { "src": "/international-usd.html", "dest": "/international-usd.html" },

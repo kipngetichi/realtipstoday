@@ -498,6 +498,16 @@
             .nav-menu::-webkit-scrollbar { display: none; }
             .nav-link { font-size: 0.9rem; white-space: nowrap; }
             .hero h1 { font-size: 2rem; }
+            .container {
+                width: 98% !important;
+                padding: 0 4px !important;
+            }
+            .hero {
+                padding: 3rem 0 1.5rem !important;
+            }
+            .premium-section {
+                padding: 1.5rem 0 !important;
+            }
             .hero-badges {
                 flex-wrap: nowrap;
                 overflow-x: auto;
@@ -520,40 +530,177 @@
                 padding: 0.75rem;
             }
             .hero-free-tip {
-                padding: 1.5rem;
-                margin-top: 2rem;
-                border-radius: 20px;
+                padding: 1rem;
+                margin-top: 1.5rem;
+                border-radius: 16px;
+            }
+            .hero-free-tip-header {
+                margin-bottom: 1rem;
             }
             .hero-free-tip-match {
                 flex-direction: column;
-                gap: 0.75rem;
-                margin-bottom: 1.5rem;
+                gap: 0.4rem;
+                margin-bottom: 1rem;
             }
             .hero-free-tip-match .team {
-                font-size: 1.75rem;
+                font-size: 1.4rem;
                 text-align: center !important;
             }
             .hero-free-tip-match .vs {
-                width: 32px;
-                height: 32px;
-                font-size: 0.65rem;
+                width: 28px;
+                height: 28px;
+                font-size: 0.6rem;
             }
             .hero-free-tip-footer {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
-                padding: 1.25rem;
+                gap: 0.6rem;
+                padding: 1rem;
                 text-align: center;
             }
             .hero-free-tip-prediction {
                 width: 100%;
                 flex-direction: column;
-                gap: 0.4rem;
+                gap: 0.3rem;
                 border-top: 1px solid rgba(255, 255, 255, 0.08);
-                padding-top: 1rem;
+                padding-top: 0.8rem;
             }
             .hero-free-tip-prediction strong {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+            }
+            
+            .premium-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 4px !important;
+                padding: 0 2px !important;
+                margin-bottom: 1.5rem !important;
+            }
+            .premium-card {
+                background: #1c1e2f !important;
+                border: 1px solid rgba(255,255,255,0.05) !important;
+                border-radius: 6px !important;
+                padding: 0.8rem 2px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                min-height: auto !important;
+            }
+            .jackpot-wrapper {
+                margin-top: 2.5rem !important;
+            }
+            .jackpot-card {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0.75rem !important;
+                border: 2px solid #3b82f6 !important;
+                border-radius: 12px !important;
+                margin: 0 2px !important;
+                background: #1c1d29 !important;
+            }
+            .jackpot-card-left {
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+            .jackpot-icon {
+                width: 38px !important;
+                height: 38px !important;
+                border-radius: 50% !important;
+                background: #1e293b !important;
+                border: 1px solid rgba(59, 130, 246, 0.2) !important;
+                flex-shrink: 0;
+            }
+            .jackpot-icon svg {
+                width: 18px !important;
+                height: 18px !important;
+            }
+            .jackpot-info h3 {
+                font-size: 1rem !important;
+                margin-bottom: 0 !important;
+                font-weight: 800 !important;
+            }
+            .jackpot-info p {
+                font-size: 0.65rem !important;
+                color: #94a3b8 !important;
+                line-height: 1.2 !important;
+            }
+            .jackpot-card-right {
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                gap: 4px !important;
+                flex-shrink: 0;
+            }
+            .jackpot-price {
+                font-size: 0.95rem !important;
+                font-weight: 900 !important;
+            }
+            .jackpot-btn {
+                background: #3b82f6 !important;
+                color: white !important;
+                padding: 6px 12px !important;
+                font-size: 0.7rem !important;
+                border-radius: 50px !important;
+                font-weight: 900 !important;
+            }
+            
+            /* Compact Wildcards Grid Fix */
+            .premium-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 4px !important;
+                padding: 0 4px !important;
+            }
+            .premium-card {
+                padding: 0.8rem 2px !important;
+                min-height: auto !important;
+                border-radius: 8px !important;
+            }
+            .premium-badge-wrapper {
+                font-size: 0.55rem !important;
+                margin-bottom: 6px !important;
+            }
+            .premium-card-desc {
+                font-size: 0.6rem !important;
+                line-height: 1.1 !important;
+                min-height: 2.2rem !important;
+            }
+            .premium-card-price {
+                font-size: 0.85rem !important;
+            }
+            .premium-btn {
+                font-size: 0.6rem !important;
+                padding: 5px 2px !important;
+            }
+            .section-title {
+                margin-top: 1.5rem !important;
+                margin-bottom: 0.5rem !important;
+                font-size: 1.6rem !important;
+            }
+            .section-subtitle {
+                margin-bottom: 1rem !important;
+            }
+            .jackpot-wrapper {
+                margin-top: 1.5rem !important;
+            }
+            .payment-methods-wrap {
+                padding: 1.25rem !important;
+                margin-top: 1.5rem !important;
+            }
+            .payment-title {
+                margin-bottom: 1rem !important;
+                font-size: 0.8rem !important;
+            }
+            .payment-icons {
+                gap: 1.25rem !important;
+            }
+            .pay-icon {
+                font-size: 1.2rem !important;
+            }
+            .pay-label {
+                font-size: 0.7rem !important;
             }
         }
 
@@ -1241,21 +1388,19 @@
         }
         .jackpot-top-badge {
             position: absolute;
-            top: -18px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6);
-            background-size: 200% auto;
-            animation: gradient-shift 3s linear infinite;
-            padding: 8px 28px;
-            border-radius: 30px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 40%, #7e22ce 70%, #be123c 100%);
+            padding: 6px 24px;
+            border-radius: 50px;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: white;
             z-index: 10;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         @keyframes gradient-shift {
             0% { background-position: 0% 50%; }
@@ -1377,8 +1522,8 @@
             margin-right: 2px;
         }
         .jackpot-btn {
-            background: #f59e0b;
-            color: #121420;
+            background: #3b82f6;
+            color: white;
             padding: 14px 32px;
             border-radius: 16px;
             font-weight: 800;
@@ -1387,7 +1532,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
         .jackpot-card:hover .jackpot-btn {
             background: #fbbf24;
@@ -1397,23 +1542,34 @@
         
         /* Global/International Variant */
         .global-card {
-            border-color: rgba(20, 184, 166, 0.1);
+            display: flex;
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 1.5rem !important;
+            border-color: rgba(20, 184, 166, 0.2);
+            padding: 2.5rem !important;
+        }
+        .global-card .jackpot-card-left {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 1.5rem !important;
         }
         .global-card .jackpot-icon {
             background: rgba(20, 184, 166, 0.1);
             color: #14b8a6;
-            border-color: rgba(20, 184, 166, 0.2);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 50% !important;
+        }
+        .global-card .jackpot-icon svg {
+            width: 35px !important;
+            height: 35px !important;
         }
         .global-card:hover {
-            border-color: rgba(20, 184, 166, 0.3);
-        }
-        .global-card:hover .jackpot-icon {
-            background: rgba(20, 184, 166, 0.2);
-            color: #2dd4bf;
             border-color: rgba(20, 184, 166, 0.5);
-        }
-        .global-card .jackpot-price {
-            color: #14b8a6;
+            box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.2);
         }
         .global-top-badge {
             background: linear-gradient(90deg, #14b8a6, #0d9488, #0ea5e9);
@@ -1422,11 +1578,53 @@
         .global-btn {
             background: #14b8a6;
             color: white;
-            box-shadow: 0 10px 20px rgba(20, 184, 166, 0.3);
+            padding: 14px 32px !important;
+            border-radius: 50px !important;
+            font-size: 1rem !important;
+            font-weight: 800 !important;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(20, 184, 166, 0.2);
+            text-transform: uppercase;
+            text-decoration: none;
         }
-        .global-card:hover .global-btn {
-            background: #2dd4bf;
-            box-shadow: 0 15px 30px rgba(20, 184, 166, 0.4);
+        .global-footer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        .global-btn:hover {
+            background: #0d9488;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(20, 184, 166, 0.3);
+        }
+        .global-price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .global-price-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(20, 184, 166, 0.1);
+            border-radius: 12px;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .global-card {
+                padding: 1.5rem !important;
+                gap: 1rem !important;
+            }
+            .global-price-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Global Access Redesign */
@@ -1565,41 +1763,51 @@
                 grid-template-columns: 1fr;
             }
             .jackpot-card {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem 1.5rem;
-                gap: 2rem;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 1.5rem;
+                gap: 1rem;
             }
             .jackpot-card-left {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1.2rem;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                flex: 1;
             }
             .jackpot-icon {
-                width: 60px;
-                height: 60px;
+                width: 45px;
+                height: 45px;
+                border-radius: 12px;
             }
             .jackpot-icon svg {
-                width: 30px;
-                height: 30px;
+                width: 24px;
+                height: 24px;
             }
             .jackpot-info h3 {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
+                margin-bottom: 2px;
+            }
+            .jackpot-info p {
+                font-size: 0.8rem;
+                display: block;
             }
             .jackpot-card-right {
-                width: 100%;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                border-top: 1px solid rgba(255,255,255,0.05);
-                padding-top: 1.5rem;
+                width: auto;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                border-top: none;
+                padding-top: 0;
+                gap: 0.4rem;
             }
             .jackpot-price {
-                font-size: 1.8rem;
+                font-size: 1.2rem;
             }
             .jackpot-btn {
-                padding: 10px 24px;
-                font-size: 0.9rem;
+                padding: 6px 16px;
+                font-size: 0.8rem;
+                border-radius: 10px;
             }
         }
 
@@ -2297,70 +2505,91 @@
 
      <main>
          <section class="premium-section">
-              <div class="container">
-                  <h2 class="section-title" style="text-align: center;"><span>Daily</span> Odds</h2>
-                  <p class="section-subtitle">
-                      Subscription valid for 24 hours
-                  </p>
-                  
-                  <div class="premium-grid">
-                        <div class="premium-card buy-trigger" data-plan="2+ Odds Daily" data-amount="125">
-                            <div class="premium-badge-wrapper">2+ Odds</div>
-                            <div class="premium-card-title">2+ Odds Daily</div>
-                            <div class="premium-card-desc">2.0+ odds, steady profits</div>
-                            <div class="premium-card-price">Ksh 125</div>
-                            <div class="premium-btn">Buy Now</div>
+               <div class="container">
+                   <h2 class="section-title" style="text-align: center;"><span>Daily</span> Odds</h2>
+                   <p class="section-subtitle">Subscription valid for 24 hours</p>
+                   
+                   <div class="premium-grid">
+                        <div class="premium-card buy-trigger" data-plan="2+ Odds Daily" data-amount="150">
+                            <div class="premium-badge-wrapper">2+ ODDS</div>
+                            <div class="premium-card-desc">Daily 2+ odds analysis with expe...</div>
+                            <div class="premium-card-price">KSH 150</div>
+                            <div class="premium-btn">BUY NOW</div>
                         </div>
                        
-                        <div class="premium-card buy-trigger" data-plan="2 Draws Tips" data-amount="350">
-                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #10b981, #f59e0b);">15+ Odds</div>
-                            <div class="premium-card-title">2 Draws Tips</div>
-                            <div class="premium-card-desc">2 matches daily, high return</div>
-                            <div class="premium-card-price">Ksh 350</div>
-                            <div class="premium-btn">Buy Now</div>
+                        <div class="premium-card buy-trigger" data-plan="5+ Odds Daily" data-amount="300">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #6366f1, #a855f7);">5+ ODDS</div>
+                            <div class="premium-card-desc">Daily 5+ odds analysis with expe...</div>
+                            <div class="premium-card-price">KSH 300</div>
+                            <div class="premium-btn">BUY NOW</div>
                         </div>
                        
-                        <div class="premium-card buy-trigger" data-plan="Golden Fixed" data-amount="600">
-                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #dc2626, #ea580c);">45+ Odds</div>
-                            <div class="premium-card-title">Golden Fixed</div>
-                            <div class="premium-card-desc">Guaranteed wins, VIP</div>
-                            <div class="premium-card-price">Ksh 600</div>
-                            <div class="premium-btn">Buy Now</div>
+                        <div class="premium-card buy-trigger" data-plan="10+ Odds Daily" data-amount="450">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #3b82f6, #1d4ed8);">10+ ODDS</div>
+                            <div class="premium-card-desc">Daily 10+ odds analysis with expe...</div>
+                            <div class="premium-card-price">KSH 450</div>
+                            <div class="premium-btn">BUY NOW</div>
                         </div>
                    </div>
                    
-                    <div class="jackpot-wrapper">
-                        <div class="jackpot-top-badge">Jackpot</div>
-                        <div class="jackpot-card buy-trigger" data-plan="Jackpot Tips" data-amount="450">
-                             <div class="jackpot-card-left">
-                                 <div class="jackpot-icon">
-                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10M6 4v7c0 3.31 2.69 6 6 6s6-2.69 6-6V4M4 4h2M18 4h2"></path></svg>
-                                 </div>
-                                 <div class="jackpot-info">
-                                     <h3>JACKPOT</h3>
-                                     <p>Get 2 Possible options Jackpot sure analysis prediction.</p>
-                                 </div>
-                             </div>
-                             <div class="jackpot-card-right">
-                                 <div class="jackpot-price-tag">
-                                     <span class="jackpot-price-label">Daily Access</span>
-                                     <div class="jackpot-price"><span>Ksh</span>450</div>
-                                 </div>
-                                 <div class="jackpot-btn">Buy Now</div>
-                             </div>
-                         </div>
-                    </div>
+                   <div class="jackpot-wrapper">
+                       <div class="jackpot-top-badge">JACKPOT</div>
+                       <div class="jackpot-card buy-trigger" data-plan="Jackpot Tips" data-amount="500">
+                            <div class="jackpot-card-left">
+                                <div class="jackpot-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10M6 4v7c0 3.31 2.69 6 6 6s6-2.69 6-6V4M4 4h2M18 4h2"></path></svg>
+                                </div>
+                                <div class="jackpot-info">
+                                    <h3>JACKPOT</h3>
+                                    <p>Get 2 Possible options Jackpot sure analysis prediction.</p>
+                                </div>
+                            </div>
+                            <div class="jackpot-card-right">
+                                <div class="jackpot-price">KSH 500</div>
+                                <div class="jackpot-btn">BUY NOW</div>
+                            </div>
+                        </div>
+                   </div>
 
-                    <div class="jackpot-wrapper" style="margin-top: 3rem;">
+                   <h2 class="section-title" style="text-align: center;"><span>Golden</span> FIXED, CS, HTFT</h2>
+                   <p class="section-subtitle">Subscription valid for 24 hours</p>
+                   
+                   <div class="premium-grid">
+                        <div class="premium-card buy-trigger" data-plan="Golden Fixed" data-amount="800">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #f59e0b, #d97706);">Golden FIXED</div>
+                            <div class="premium-card-desc">Expert Golden Fixed 50+ odds...</div>
+                            <div style="font-weight: 900; color: #f59e0b; font-size: 0.75rem; margin: 2px 0;">50+ ODDS</div>
+                            <div class="premium-card-price">KSH 800</div>
+                            <div class="premium-btn">BUY NOW</div>
+                        </div>
+                       
+                        <div class="premium-card buy-trigger" data-plan="2 Correct Scores" data-amount="700">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #10b981, #059669);">2 Correct S.</div>
+                            <div class="premium-card-desc">Expert 2 Correct Scores tips with high accuracy...</div>
+                            <div style="font-weight: 900; color: #10b981; font-size: 0.75rem; margin: 2px 0;">40+ ODDS</div>
+                            <div class="premium-card-price">KSH 700</div>
+                            <div class="premium-btn">BUY NOW</div>
+                        </div>
+                       
+                        <div class="premium-card buy-trigger" data-plan="HTFT Tips" data-amount="600">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #3b82f6, #2563eb);">HTFT</div>
+                            <div class="premium-card-desc">Expert HT/FT tips with huge odds potential...</div>
+                            <div style="font-weight: 900; color: #3b82f6; font-size: 0.75rem; margin: 2px 0;">30+ ODDS</div>
+                            <div class="premium-card-price">KSH 600</div>
+                            <div class="premium-btn">BUY NOW</div>
+                        </div>
+                   </div>
+
+                    <div class="jackpot-wrapper">
                         <div class="jackpot-top-badge global-top-badge">Global Access</div>
                         <div class="jackpot-card global-card">
                             <div class="jackpot-card-left">
                                 <div class="jackpot-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                                 </div>
-                                <div class="jackpot-info">
-                                    <h3>International Plans</h3>
-                                    <p style="font-weight: 800; margin-bottom: 0.8rem; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                                <div class="jackpot-info" style="width: 100%;">
+                                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">International Plans</h3>
+                                    <p style="font-weight: 700; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;">
                                         <span style="background: linear-gradient(90deg, #FCDC04, #D90000); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Uganda</span>
                                         <span style="color: #475569;">•</span>
                                         <span style="background: linear-gradient(90deg, #1EB53A, #00A3DD); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tanzania</span>
@@ -2371,24 +2600,25 @@
                                         <span style="color: #475569;">•</span>
                                         <span style="background: linear-gradient(90deg, #14b8a6, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">& Rest of the World</span>
                                     </p>
-                                    <div class="price-list" style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
-                                        <div class="price-item" style="border: none; padding: 10px 16px; background: rgba(255,255,255,0.03); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.05);">
-                                            <span class="service-name" style="color: #cbd5e1; font-weight: 700;">2+ Odds Daily Plan</span>
-                                            <span class="service-cost" style="color: #14b8a6; font-size: 1.3rem; font-weight: 900;">$3</span>
+                                    
+                                    <div class="global-price-grid">
+                                        <div class="global-price-item">
+                                            <span style="color: #94a3b8; font-weight: 600;">2+ Odds Daily</span>
+                                            <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$3</span>
                                         </div>
-                                        <div class="price-item" style="border: none; padding: 10px 16px; background: rgba(255,255,255,0.03); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.05);">
-                                            <span class="service-name" style="color: #cbd5e1; font-weight: 700;">2 Draws Daily Plan</span>
-                                            <span class="service-cost" style="color: #14b8a6; font-size: 1.3rem; font-weight: 900;">$5</span>
+                                        <div class="global-price-item">
+                                            <span style="color: #94a3b8; font-weight: 600;">2 Draws Daily</span>
+                                            <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$5</span>
                                         </div>
-                                        <div class="price-item" style="border: none; padding: 10px 16px; background: rgba(255,255,255,0.03); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.05);">
-                                            <span class="service-name" style="color: #cbd5e1; font-weight: 700;">Golden Fixed Plan</span>
-                                            <span class="service-cost" style="color: #14b8a6; font-size: 1.3rem; font-weight: 900;">$9</span>
+                                        <div class="global-price-item">
+                                            <span style="color: #94a3b8; font-weight: 600;">Golden Fixed</span>
+                                            <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$9</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="jackpot-card-right">
-                                <a href="international-payment.html" class="jackpot-btn global-btn">Get Access</a>
+                            <div class="global-footer">
+                                <a href="international-payment.html" class="global-btn">Click to GET ACCESS</a>
                             </div>
                         </div>
                     </div>
@@ -2398,15 +2628,30 @@
                         <div class="payment-icons">
                             <div class="payment-method">
                                 <div class="pay-icon" style="color: #003087;">PayPal</div>
-                                <span class="pay-label">Acc: bitkwach@gmail.com</span>
+                                <div style="display:flex;align-items:center;gap:5px;">
+                                    <span class="pay-label" id="paypalAcc">bitkwach@gmail.com</span>
+                                    <button onclick="copyIntlAcc('paypalAcc','paypalCopyBtn')" id="paypalCopyBtn" title="Copy PayPal account" style="background:none;border:none;cursor:pointer;color:#94a3b8;padding:2px;line-height:1;">
+                                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="payment-method">
                                 <div class="pay-icon" style="color: #6d1ed1;">Skrill</div>
-                                <span class="pay-label">Acc: bitkwach@gmail.com</span>
+                                <div style="display:flex;align-items:center;gap:5px;">
+                                    <span class="pay-label" id="skrillAcc">bitkwach@gmail.com</span>
+                                    <button onclick="copyIntlAcc('skrillAcc','skrillCopyBtn')" id="skrillCopyBtn" title="Copy Skrill account" style="background:none;border:none;cursor:pointer;color:#94a3b8;padding:2px;line-height:1;">
+                                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="payment-method">
                                 <span class="pay-label">Direct Pay:</span>
-                                <div class="pay-number">254739166273</div>
+                                <div style="display:flex;align-items:center;gap:5px;">
+                                    <div class="pay-number" id="directPayNum">254739166273</div>
+                                    <button onclick="copyIntlAcc('directPayNum','directPayCopyBtn')" id="directPayCopyBtn" title="Copy Direct Pay number" style="background:none;border:none;cursor:pointer;color:#94a3b8;padding:2px;line-height:1;">
+                                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2688,18 +2933,18 @@
                 
                 <div class="footer-pricing-cards">
                     <div class="pricing-card">
+                        <div class="pricing-badge">Most Popular</div>
                         <div class="pricing-header">
-                            <span class="pricing-label">Most Popular</span>
                             <h3 class="pricing-title">Golden Fixed</h3>
                             <p class="pricing-desc">45+ odds — massive wins</p>
                         </div>
                         <div class="pricing-price">
                             <span class="currency">Ksh</span>
-                            <span class="amount">600</span>
+                            <span class="amount">800</span>
                             <span class="period">/day</span>
                         </div>
                         <ul class="pricing-features">
-                            <li>High odds (45+) guaranteed</li>
+                            <li>High odds (50+) guaranteed</li>
                             <li>Daily VIP picks</li>
                             <li>Pay Till: <span class="pay-highlight inline-pay-till-copy" data-pay-till="5438677">5438677</span> <span class="pay-hint">(Copy)</span></li>
                             <li>24/7 VIP WhatsApp support</li>
@@ -2716,7 +2961,7 @@
                         </div>
                         <div class="pricing-price">
                             <span class="currency">Ksh</span>
-                            <span class="amount">125</span>
+                            <span class="amount">150</span>
                             <span class="period">/day</span>
                         </div>
                         <ul class="pricing-features">
@@ -2729,8 +2974,8 @@
                     </div>
 
                     <div class="pricing-card">
+                        <div class="pricing-badge" style="background: linear-gradient(90deg, #0ea5e9, #14b8a6);">🌍 International</div>
                         <div class="pricing-header">
-                            <span class="pricing-label">International</span>
                             <h3 class="pricing-title">Global VIP</h3>
                             <p class="pricing-desc">Seamless Worldwide Access</p>
                         </div>
@@ -2780,7 +3025,7 @@
                 </div>
                 <div class="footer-column">
                     <h4>Premium Services</h4>
-                    <a href="Tips/goldentips.html">Golden Fixed (45+ odds)</a>
+                    <a href="Tips/goldentips.html">Golden Fixed (50+ odds)</a>
                     <a href="Tips/2odds.html">2+ Odds Daily</a>
                     <a href="Tips/2draws.html">2 Draws Tips</a>
                     <a href="Jptips/index.html">Jackpot Tips</a>
@@ -2924,32 +3169,201 @@
         });
 
         copyTill.addEventListener('click', () => {
-            const tillNum = document.getElementById('tillNumber').textContent;
-            navigator.clipboard.writeText(tillNum).then(() => {
-                const originalSvg = copyTill.innerHTML;
-                copyTill.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            const tillNum = document.getElementById('tillNumber').textContent.trim();
+
+            // Helper: show toast
+            function showCopyToast(msg, success) {
+                let toast = document.getElementById('copyToastModal');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.id = 'copyToastModal';
+                    toast.style.cssText = `
+                        position: fixed;
+                        bottom: 130px;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(20px);
+                        background: ${success ? '#10b981' : '#ef4444'};
+                        color: white;
+                        padding: 12px 24px;
+                        border-radius: 999px;
+                        font-weight: 700;
+                        font-size: 0.9rem;
+                        z-index: 99999;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        pointer-events: none;
+                        white-space: nowrap;
+                    `;
+                    document.body.appendChild(toast);
+                }
+                toast.style.background = success ? '#10b981' : '#ef4444';
+                toast.textContent = msg;
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateX(-50%) translateY(0)';
                 setTimeout(() => {
-                    copyTill.innerHTML = originalSvg;
-                }, 2000);
-            });
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(-50%) translateY(20px)';
+                }, 2500);
+            }
+
+            // Helper: swap icon to checkmark temporarily
+            const originalSvg = copyTill.innerHTML;
+            function showCheck() {
+                copyTill.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(() => { copyTill.innerHTML = originalSvg; }, 2000);
+            }
+
+            // Try modern Clipboard API first
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(tillNum).then(() => {
+                    showCheck();
+                    showCopyToast('Till Number Copied! ✓', true);
+                }).catch(() => {
+                    // Fallback
+                    fallbackCopy(tillNum);
+                });
+            } else {
+                fallbackCopy(tillNum);
+            }
+
+            function fallbackCopy(text) {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                try {
+                    const ok = document.execCommand('copy');
+                    if (ok) {
+                        showCheck();
+                        showCopyToast('Till Number Copied! ✓', true);
+                    } else {
+                        showCopyToast('Copy failed. Please copy manually: ' + text, false);
+                    }
+                } catch(e) {
+                    showCopyToast('Copy failed. Please copy manually: ' + text, false);
+                }
+                document.body.removeChild(ta);
+            }
         });
 
         verifyBtn.addEventListener('click', () => {
-            const confirmation = document.getElementById('mpesaConfirmation').value;
-            if (!confirmation.trim()) {
-                alert('Please paste your M-Pesa confirmation message.');
+            const confirmation = document.getElementById('mpesaConfirmation').value.trim();
+            if (!confirmation) {
+                showVerifyResult('error', '⚠️ Please paste your M-Pesa confirmation message first.');
                 return;
             }
+
+            // Get the required amount from the modal (e.g. "KSH 500" → "500")
+            const amountText = document.getElementById('modalAmount').textContent.trim();
+            const requiredAmount = amountText.replace(/[^0-9]/g, '');
+
+            // Validate the message
+            const hasName = /codesoft\s*technologies/i.test(confirmation);
+            const hasAmount = confirmation.includes(requiredAmount);
+
             verifyBtn.textContent = 'Verifying...';
+            verifyBtn.disabled = true;
             verifyBtn.style.opacity = '0.7';
+
             setTimeout(() => {
-                alert('Verification in progress. Please wait for SMS/WhatsApp confirmation.');
                 verifyBtn.textContent = 'Verify Payment';
+                verifyBtn.disabled = false;
                 verifyBtn.style.opacity = '1';
-                hideModal();
-            }, 2000);
+
+                if (hasName && hasAmount) {
+                    showVerifyResult('success',
+                        '✅ Thanks for your payment! You will receive your tips shortly via WhatsApp.');
+                } else {
+                    let reason = '';
+                    if (!hasName && !hasAmount) {
+                        reason = 'Message does not show payment to Codesoft Technologies or the correct amount (KSH ' + requiredAmount + ').';
+                    } else if (!hasName) {
+                        reason = 'Message does not confirm payment to Codesoft Technologies.';
+                    } else {
+                        reason = 'Message does not show the correct amount of KSH ' + requiredAmount + '.';
+                    }
+                    showVerifyResult('error', '❌ Payment verification failed. ' + reason + ' Please check and try again.');
+                }
+            }, 1500);
         });
 
+        function showVerifyResult(type, message) {
+            let resultBox = document.getElementById('verifyResultBox');
+            if (!resultBox) {
+                resultBox = document.createElement('div');
+                resultBox.id = 'verifyResultBox';
+                resultBox.style.cssText = `
+                    margin-top: 12px;
+                    padding: 12px 16px;
+                    border-radius: 10px;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    transition: all 0.3s ease;
+                `;
+                verifyBtn.insertAdjacentElement('afterend', resultBox);
+            }
+            if (type === 'success') {
+                resultBox.style.background = 'rgba(16,185,129,0.15)';
+                resultBox.style.border = '1px solid rgba(16,185,129,0.4)';
+                resultBox.style.color = '#10b981';
+            } else {
+                resultBox.style.background = 'rgba(239,68,68,0.12)';
+                resultBox.style.border = '1px solid rgba(239,68,68,0.35)';
+                resultBox.style.color = '#f87171';
+            }
+            resultBox.textContent = message;
+            resultBox.style.display = 'block';
+        }
+
+
+        // International payment account copy buttons
+        function copyIntlAcc(textId, btnId) {
+            const text = document.getElementById(textId).textContent.trim();
+            const btn = document.getElementById(btnId);
+            const checkSvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            const copySvg = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+
+            function onSuccess() {
+                btn.innerHTML = checkSvg;
+                btn.style.color = '#10b981';
+                setTimeout(() => { btn.innerHTML = copySvg; btn.style.color = '#94a3b8'; }, 2000);
+                // Reuse the modal toast helper if available, else inline toast
+                if (typeof showCopyToast === 'function') {
+                    showCopyToast('Copied: ' + text + ' ✓', true);
+                } else {
+                    let t = document.getElementById('intlCopyToast');
+                    if (!t) {
+                        t = document.createElement('div');
+                        t.id = 'intlCopyToast';
+                        t.style.cssText = 'position:fixed;bottom:130px;left:50%;transform:translateX(-50%) translateY(20px);background:#10b981;color:white;padding:10px 22px;border-radius:999px;font-weight:700;font-size:0.85rem;z-index:99999;opacity:0;transition:all 0.3s ease;pointer-events:none;white-space:nowrap;';
+                        document.body.appendChild(t);
+                    }
+                    t.textContent = 'Copied! ' + text + ' ✓';
+                    t.style.opacity = '1';
+                    t.style.transform = 'translateX(-50%) translateY(0)';
+                    setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(20px)'; }, 2500);
+                }
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(onSuccess).catch(() => {
+                    const ta = document.createElement('textarea');
+                    ta.value = text; ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+                    document.body.appendChild(ta); ta.focus(); ta.select();
+                    try { if (document.execCommand('copy')) onSuccess(); } catch(e) {}
+                    document.body.removeChild(ta);
+                });
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = text; ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+                document.body.appendChild(ta); ta.focus(); ta.select();
+                try { if (document.execCommand('copy')) onSuccess(); } catch(e) {}
+                document.body.removeChild(ta);
+            }
+        }
 
         // Copy to clipboard functionality
         const inlinePayTillElements = document.querySelectorAll('.inline-pay-till-copy');
