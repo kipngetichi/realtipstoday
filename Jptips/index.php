@@ -432,6 +432,195 @@ $telegramLink = 'https://t.me/25471380429';
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ── Payment Modal ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(6, 10, 26, 0.75);
+            z-index: 9000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            width: min(560px, 100%);
+            position: relative;
+            box-shadow: 0 30px 80px rgba(6,10,26,0.3);
+            animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.88) translateY(20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover { background: #e2e8f0; }
+
+        .modal-header { margin-bottom: 1.5rem; }
+        .modal-header h2 { margin: 0 0 0.3rem; font-size: 1.4rem; font-weight: 900; color: #0f172a; }
+        .modal-header p  { margin: 0; color: #64748b; font-size: 0.9rem; }
+
+        .modal-body-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 520px) {
+            .modal-body-grid { grid-template-columns: 1fr; }
+        }
+
+        .payment-info-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #94a3b8;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .till-number-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .till-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: 2px;
+        }
+
+        .copy-btn {
+            background: #f1f5f9;
+            border: none;
+            border-radius: 8px;
+            padding: 0.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .copy-btn:hover { background: #e2e8f0; }
+
+        .till-name {
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .payment-amount {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #10b981;
+        }
+
+        .mpesa-instructions {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+        }
+
+        .mpesa-instructions h4 {
+            margin: 0 0 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: #065f46;
+        }
+
+        .mpesa-instructions ol {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .mpesa-instructions li {
+            font-size: 0.85rem;
+            color: #064e3b;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .confirmation-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        .confirmation-field textarea {
+            width: 100%;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+
+        .confirmation-field textarea:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+
+        .verify-btn {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .verify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16,185,129,0.35);
+        }
     </style>
 </head>
 <body>
@@ -476,7 +665,7 @@ $telegramLink = 'https://t.me/25471380429';
                         </div>
 
                         <div class="jackpot-price">
-                            <div class="price-amount">Ksh 400</div>
+                            <div class="price-amount">Ksh 500</div>
                             <div class="price-label">One-time payment</div>
                         </div>
 
@@ -493,7 +682,7 @@ $telegramLink = 'https://t.me/25471380429';
                             <p>Our proven SportPesa strategies have helped 847+ members win jackpots and maximize bonuses. With our expert analysis, you're not just playing - you're strategically positioned for success.</p>
                         </div>
 
-                        <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="btn">Get MEGA Jackpot Tips</a>
+                        <button class="btn buy-trigger" data-plan="MEGA Jackpot" data-amount="500">Get MEGA Jackpot Tips 🛒</button>
                     </div>
 
                     <div class="jackpot-card jackpot-card--sportpesa">
@@ -503,7 +692,7 @@ $telegramLink = 'https://t.me/25471380429';
                         </div>
 
                         <div class="jackpot-price">
-                            <div class="price-amount">Ksh 300</div>
+                            <div class="price-amount">Ksh 350</div>
                             <div class="price-label">One-time payment</div>
                         </div>
 
@@ -520,7 +709,7 @@ $telegramLink = 'https://t.me/25471380429';
                             <p>Join our community of winners who consistently hit midweek jackpots. Our systematic approach identifies bonus-rich opportunities that others miss, giving you the edge for guaranteed bonus payouts.</p>
                         </div>
 
-                        <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="btn">Get Midweek Jackpot Tips</a>
+                        <button class="btn buy-trigger" data-plan="Midweek Jackpot" data-amount="350">Get Midweek Jackpot Tips 🛒</button>
                     </div>
 
                     <div class="jackpot-card jackpot-card--betika">
@@ -548,7 +737,7 @@ $telegramLink = 'https://t.me/25471380429';
                             <p>Our Betika jackpot system is designed for bonus success. With 2,847+ satisfied customers and a 92% bonus win rate, our affordable tips deliver premium results without premium prices.</p>
                         </div>
 
-                        <a href="<?= htmlspecialchars($whatsappLink, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" class="btn">Get Betika Jackpot Tips</a>
+                        <button class="btn buy-trigger" data-plan="Betika Jackpot" data-amount="200">Get Betika Jackpot Tips 🛒</button>
                     </div>
                 </div>
 
@@ -560,6 +749,61 @@ $telegramLink = 'https://t.me/25471380429';
         </section>
     </main>
 
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h2 id="modalTitle">Buy Plan</h2>
+                <p id="modalSubtitle">Pay via M-Pesa Lipa na M-Pesa. Tips sent after payment.</p>
+            </div>
+
+            <div class="modal-body-grid">
+                <div class="modal-left-col">
+                    <div class="payment-info-box">
+                        <span class="info-label">Pay to Till Number</span>
+                        <div class="till-number-container">
+                            <span class="till-number" id="tillNumber">5438677</span>
+                            <button class="copy-btn" id="copyTill" title="Copy Till Number">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="info-label">Till Name</span>
+                        <div class="till-name">Codesoft Technologies</div>
+                        <span class="info-label">Amount</span>
+                        <div class="payment-amount" id="modalAmount">KSH 0</div>
+                    </div>
+
+                    <div class="mpesa-instructions">
+                        <h4>M-Pesa Payment — How to pay:</h4>
+                        <ol>
+                            <li>Go to M-Pesa &gt; Lipa na M-Pesa &gt; Buy Goods</li>
+                            <li>Enter Till Number: <strong>5438677</strong></li>
+                            <li>Enter Amount: <strong id="instructionAmount">KSH 0</strong></li>
+                            <li>Complete payment &amp; send confirmation to +254739162763</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="modal-right-col">
+                    <div class="confirmation-field">
+                        <label>Paste M-Pesa Confirmation Message</label>
+                        <textarea id="mpesaConfirmation" rows="5" placeholder="Paste your M-Pesa confirmation SMS here..."></textarea>
+                    </div>
+                    <button class="verify-btn" id="verifyBtn">Verify Payment ✓</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p style="text-align: center; color: rgba(255,255,255,0.7); margin: 0; padding: 2rem 0;">
@@ -567,5 +811,106 @@ $telegramLink = 'https://t.me/25471380429';
             </p>
         </div>
     </footer>
+
+    <script>
+        const paymentModal = document.getElementById('paymentModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalAmount = document.getElementById('modalAmount');
+        const instructionAmount = document.getElementById('instructionAmount');
+        const copyTill = document.getElementById('copyTill');
+        const verifyBtn = document.getElementById('verifyBtn');
+        const buyButtons = document.querySelectorAll('.buy-trigger');
+
+        function openModal(plan, amount) {
+            modalTitle.textContent = 'Buy ' + plan + ' Plan';
+            modalAmount.textContent = 'KSH ' + amount;
+            instructionAmount.textContent = 'KSH ' + amount;
+            paymentModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideModal() {
+            paymentModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        buyButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal(btn.getAttribute('data-plan'), btn.getAttribute('data-amount'));
+            });
+        });
+
+        closeModalBtn.addEventListener('click', hideModal);
+        window.addEventListener('click', function(e) {
+            if (e.target === paymentModal) hideModal();
+        });
+
+        copyTill.addEventListener('click', function() {
+            const tillNum = document.getElementById('tillNumber').textContent.trim();
+            const originalSvg = copyTill.innerHTML;
+
+            function showCheck() {
+                copyTill.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(function() { copyTill.innerHTML = originalSvg; }, 2000);
+            }
+
+            function showToast(msg, success) {
+                let toast = document.getElementById('jpCopyToast');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.id = 'jpCopyToast';
+                    toast.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);padding:12px 24px;border-radius:999px;font-weight:700;font-size:0.9rem;z-index:99999;opacity:0;transition:all 0.3s ease;pointer-events:none;white-space:nowrap;color:#fff;';
+                    document.body.appendChild(toast);
+                }
+                toast.style.background = success ? '#10b981' : '#ef4444';
+                toast.textContent = msg;
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateX(-50%) translateY(0)';
+                setTimeout(function() {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(-50%) translateY(20px)';
+                }, 2500);
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(tillNum).then(function() {
+                    showCheck();
+                    showToast('Till Number Copied! ✔', true);
+                }).catch(function() {
+                    showToast('Copy failed. Till: ' + tillNum, false);
+                });
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = tillNum;
+                ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+                document.body.appendChild(ta);
+                ta.focus(); ta.select();
+                try {
+                    document.execCommand('copy');
+                    showCheck();
+                    showToast('Till Number Copied! ✔', true);
+                } catch(err) {
+                    showToast('Copy failed. Till: ' + tillNum, false);
+                }
+                document.body.removeChild(ta);
+            }
+        });
+
+        verifyBtn.addEventListener('click', function() {
+            const msg = document.getElementById('mpesaConfirmation').value.trim();
+            if (!msg) {
+                alert('Please paste your M-Pesa confirmation message first.');
+                return;
+            }
+            const plan = modalTitle.textContent.replace('Buy ', '').replace(' Plan', '');
+            const amount = modalAmount.textContent;
+            const wa = 'https://wa.me/25471380429?text=' + encodeURIComponent(
+                'Hello Realtime Tips, I have paid for ' + plan + ' (' + amount + ').\n\nM-Pesa Confirmation:\n' + msg
+            );
+            window.open(wa, '_blank');
+        });
+    </script>
 </body>
 </html>

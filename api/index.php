@@ -55,4 +55,14 @@ if (file_exists($directPath) && is_file($directPath)) {
 }
 
 // Fallback to home page
-require __DIR__ . '/../index.php';
+    $fallback = __DIR__ . '/../index.php';
+    if (!file_exists($fallback)) {
+        $fallback = __DIR__ . '/../index.html';
+    }
+    if (file_exists($fallback)) {
+        require $fallback;
+    } else {
+        // If neither exists, show a simple message or 404
+        header("HTTP/1.0 404 Not Found");
+        echo "404 Not Found";
+    }

@@ -138,7 +138,7 @@ function initiateSTKPush($phoneNumber, $amount, $accountReference, $description,
 }
 
 // Process form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['phone_number'])) {
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['phone_number'])) {
     $phoneNumber = preg_replace('/[^0-9]/', '', $_POST['phone_number']);
     
     // Validate phone number (Kenyan formats: 07..., 01..., 2547..., 2541...)

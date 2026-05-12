@@ -2246,51 +2246,6 @@
             color: #f59e0b;
         }
 
-        .stat-card:nth-child(4) .stat-card-icon {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8b5cf6;
-        }
-
-        .stat-card-number {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-
-        .stat-card-label {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* High-End Footer */
-        .footer {
-            background-color: #060814;
-            color: #94a3b8;
-            padding: 5rem 0 2rem;
-            position: relative;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
-            overflow: hidden;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 0%, rgba(67, 120, 255, 0.08), transparent 70%);
-            pointer-events: none;
-        }
-
         .footer-top {
             display: flex;
             flex-direction: column;
@@ -2867,6 +2822,137 @@
                 display: none;
             }
         }
+
+        /* Contact Number at End of Modal */
+        .modal-contact-footer {
+            background: linear-gradient(90deg, #2563eb, #10b981);
+            color: #facc15;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .modal-contact-footer .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .modal-contact-footer .contact-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .contact-number-modal {
+            color: #facc15;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 900;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.25rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .contact-number-modal:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            text-shadow: 
+                0 2px 4px rgba(0,0,0,0.3),
+                0 0 12px rgba(250, 204, 21, 0.7);
+        }
+
+        .stat-card:nth-child(4) .stat-card-icon {
+            background: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+        }
+
+        .stat-card-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .stat-card-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-headline {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #ffffff, #cbd5e1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-subtext {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .pricing-card.featured {
+            border-color: rgba(67, 120, 255, 0.4);
+            background: rgba(67, 120, 255, 0.05);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #4378ff, #ff7a59);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(67, 120, 255, 0.4);
+        }
+
+        .pricing-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-label {
+            font-size: 0.8rem;
+            color: #4378ff;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 
@@ -2933,69 +3019,26 @@
                         <div class="hero-free-tip-date" id="dynamic-hero-date">Loading...</div>
                     </div>
                     <div class="hero-free-tip-match">
-                        <span class="team">Southampton</span>
-                        <span class="vs">Vs</span>
-                        <span class="team">Middlesbrough</span>
+<span class="team">Alaves</span>
+<span class="vs">Vs</span>
+<span class="team">Barcelona</span>
                     </div>
 
                     <script type="application/ld+json">
                      {
                        "@context": "https://schema.org",
                        "@type": "SportsEvent",
-                       "name": "Southampton vs Middlesbrough",
-                       "description": "Daily Free Football Prediction: 1 (Home Win)",
+                       "name": "Alaves vs Barcelona",
+                        "description": "Daily Free Football Prediction: Over 2.5 Goals",
                        "startDate": "2026-05-10T17:30:00Z",
 "homeTeam": {
-                          "@type": "SportsTeam",
-                          "name": "Southampton"
-                        },
-                        "awayTeam": {
-                          "@type": "SportsTeam",
-                          "name": "Middlesbrough"
-}
-        
-         /* Contact Number at End of Modal */
-         .modal-contact-footer {
-             background: linear-gradient(90deg, #2563eb, #10b981);
-             color: #facc15;
-             padding: 1rem 0;
-             text-align: center;
-             margin-top: 2rem;
-         }
-         
-         .modal-contact-footer .container {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             gap: 0.75rem;
-         }
-         
-         .contact-label {
-             font-size: 1rem;
-             opacity: 0.9;
-         }
-         
-         .contact-number-modal {
-             color: #facc15;
-             text-decoration: none;
-             font-size: 1.25rem;
-             font-weight: 900;
-             background: rgba(255, 255, 255, 0.2);
-             padding: 0.5rem 1.25rem;
-             border-radius: 10px;
-             transition: all 0.3s ease;
-             border: 2px solid rgba(255, 255, 255, 0.3);
-             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-         }
-         
-         .contact-number-modal:hover {
-             background: rgba(255, 255, 255, 0.3);
-             transform: translateY(-2px);
-             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-             text-shadow: 
-                 0 2px 4px rgba(0,0,0,0.3),
-                 0 0 12px rgba(250, 204, 21, 0.7);
-         }
+        "@type": "SportsTeam",
+        "name": "Alaves"
+      },
+      "awayTeam": {
+        "@type": "SportsTeam",
+        "name": "Barcelona"
+      }
                      }
                      </script>
                     <div class='hero-free-tip-footer'>
@@ -3005,12 +3048,12 @@
                                 <circle cx='12' cy='12' r='10'></circle>
                                 <polyline points='12 6 12 12 16 14'></polyline>
                             </svg>
-                            22:00
+                            22:30
                         </div>
-                        <div class='hero-free-tip-prediction'>
-                            <span>Pick:</span>
-                            <strong>GG</strong>
-                        </div>
+<div class='hero-free-tip-prediction'>
+                             <span>Pick:</span>
+                             <strong>OV2.5</strong>
+                           </div>
                     </div>
                 </div>
 
@@ -3028,7 +3071,7 @@
                     <div class='premium-card buy-trigger' data-plan='2+ Odds Daily' data-amount='150'>
                         <div class='premium-badge-wrapper'>2+ ODDS</div>
                         <div class='premium-card-desc' style='margin-bottom: 4px;'>Daily 2+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #2563eb, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #2563eb, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 150</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -3037,7 +3080,7 @@
                         <div class='premium-badge-wrapper'
                             style='background: linear-gradient(90deg, #6366f1, #a855f7);'>5+ ODDS</div>
                         <div class='premium-card-desc'>Daily 5+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #6366f1, #a855f7); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 300</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -3046,7 +3089,7 @@
                         <div class='premium-badge-wrapper'
                             style='background: linear-gradient(90deg, #3b82f6, #1d4ed8);'>10+ ODDS</div>
                         <div class='premium-card-desc'>Daily 10+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #1d4ed8); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 450</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -3084,7 +3127,7 @@
                             style="background: linear-gradient(90deg, #f59e0b, #d97706);">Golden FIXED</div>
                         <div class="premium-card-desc">Expert Golden Fixed 50+ odds...</div>
                         <div style="font-weight: 900; color: #f59e0b; font-size: 0.75rem; margin: 2px 0;">50+ ODDS</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #f59e0b, #d97706); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 800</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3094,7 +3137,7 @@
                             style="background: linear-gradient(90deg, #10b981, #059669);">2 Correct S.</div>
                         <div class="premium-card-desc">Expert 2 Correct Scores tips with high accuracy...</div>
                         <div style="font-weight: 900; color: #10b981; font-size: 0.75rem; margin: 2px 0;">40+ ODDS</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #10b981, #059669); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 700</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3104,7 +3147,7 @@
                             style="background: linear-gradient(90deg, #3b82f6, #2563eb);">HTFT</div>
                         <div class="premium-card-desc">Expert HT/FT tips with huge odds potential...</div>
                         <div style="font-weight: 900; color: #3b82f6; font-size: 0.75rem; margin: 2px 0;">30+ ODDS</div>
-                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #2563eb); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 600</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3330,22 +3373,22 @@
                          </thead>
                          <tbody>
                              <tr>
-                                 <td class="match-val">Santa Clara Vs Nacional</td>
-                                 <td class="tip-val">1</td>
-                                 <td class="odds-val">2.01</td>
-                                 <td class="score-val">2:0</td>
+<td class="match-val">Landskrona BoIS Vs Norrby</td>
+<td class="tip-val">GG</td>
+<td class="odds-val">2.36</td>
+<td class="score-val">1:1</td>
                              </tr>
                              <tr>
-                                 <td class="match-val">Rayo Vallecano Vs Girona</td>
-                                 <td class="tip-val">X/X</td>
-                                 <td class="odds-val">5.06</td>
-                                 <td class="score-val">1:1</td>
+<td class="match-val">Turan Tovuz Vs Zira</td>
+<td class="tip-val">DRAW</td>
+<td class="odds-val">2.90</td>
+<td class="score-val">1:1</td>
                              </tr>
                          </tbody>
                      </table>
                      <div class="proof-footer">
-                        <span class="returns-label">RETURNS</span>
-                        <span class="total-odds">Total Odds: 10.17</span>
+<span class="returns-label">RETURNS</span>
+<span class="total-odds">Total Odds: 6.84</span>
                     </div>
                 </div>
 
@@ -4192,4 +4235,3 @@
 </body>
 
 </html>
-
