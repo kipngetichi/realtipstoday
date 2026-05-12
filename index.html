@@ -166,10 +166,13 @@
 
         .contact-bar {
             background: linear-gradient(90deg, #2563eb, #10b981);
-            color: var(--white);
+            color: #facc15;
             padding: 0.75rem 0;
             text-align: center;
-            font-weight: 600;
+            font-weight: 900;
+            text-shadow: 
+                0 2px 4px rgba(0,0,0,0.3),
+                0 0 8px rgba(250, 204, 21, 0.5);
         }
 
         .contact-bar .container {
@@ -181,22 +184,29 @@
 
         .contact-label {
             font-size: 1rem;
-            opacity: 0.95;
+            opacity: 0.9;
         }
 
         .contact-number {
-            color: var(--white);
+            color: #facc15;
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 0.4rem 1rem;
-            border-radius: 8px;
-            transition: background 0.2s;
+            font-size: 1.25rem;
+            font-weight: 900;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.25rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .contact-number:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            text-shadow: 
+                0 2px 4px rgba(0,0,0,0.3),
+                0 0 12px rgba(250, 204, 21, 0.7);
         }
 
         .hero {
@@ -2942,7 +2952,50 @@
                         "awayTeam": {
                           "@type": "SportsTeam",
                           "name": "Middlesbrough"
-                        }
+}
+        
+         /* Contact Number at End of Modal */
+         .modal-contact-footer {
+             background: linear-gradient(90deg, #2563eb, #10b981);
+             color: #facc15;
+             padding: 1rem 0;
+             text-align: center;
+             margin-top: 2rem;
+         }
+         
+         .modal-contact-footer .container {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap: 0.75rem;
+         }
+         
+         .contact-label {
+             font-size: 1rem;
+             opacity: 0.9;
+         }
+         
+         .contact-number-modal {
+             color: #facc15;
+             text-decoration: none;
+             font-size: 1.25rem;
+             font-weight: 900;
+             background: rgba(255, 255, 255, 0.2);
+             padding: 0.5rem 1.25rem;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+             border: 2px solid rgba(255, 255, 255, 0.3);
+             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+         }
+         
+         .contact-number-modal:hover {
+             background: rgba(255, 255, 255, 0.3);
+             transform: translateY(-2px);
+             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+             text-shadow: 
+                 0 2px 4px rgba(0,0,0,0.3),
+                 0 0 12px rgba(250, 204, 21, 0.7);
+         }
                      }
                      </script>
                     <div class='hero-free-tip-footer'>
@@ -2975,7 +3028,7 @@
                     <div class='premium-card buy-trigger' data-plan='2+ Odds Daily' data-amount='150'>
                         <div class='premium-badge-wrapper'>2+ ODDS</div>
                         <div class='premium-card-desc' style='margin-bottom: 4px;'>Daily 2+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #2563eb, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 150</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -2984,7 +3037,7 @@
                         <div class='premium-badge-wrapper'
                             style='background: linear-gradient(90deg, #6366f1, #a855f7);'>5+ ODDS</div>
                         <div class='premium-card-desc'>Daily 5+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 300</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -2993,7 +3046,7 @@
                         <div class='premium-badge-wrapper'
                             style='background: linear-gradient(90deg, #3b82f6, #1d4ed8);'>10+ ODDS</div>
                         <div class='premium-card-desc'>Daily 10+ odds analysis with expe...</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class='premium-card-price'>KSH 450</div>
                         <div class='premium-btn'>BUY NOW</div>
                     </div>
@@ -3031,7 +3084,7 @@
                             style="background: linear-gradient(90deg, #f59e0b, #d97706);">Golden FIXED</div>
                         <div class="premium-card-desc">Expert Golden Fixed 50+ odds...</div>
                         <div style="font-weight: 900; color: #f59e0b; font-size: 0.75rem; margin: 2px 0;">50+ ODDS</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 800</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3041,7 +3094,7 @@
                             style="background: linear-gradient(90deg, #10b981, #059669);">2 Correct S.</div>
                         <div class="premium-card-desc">Expert 2 Correct Scores tips with high accuracy...</div>
                         <div style="font-weight: 900; color: #10b981; font-size: 0.75rem; margin: 2px 0;">40+ ODDS</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 700</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3051,7 +3104,7 @@
                             style="background: linear-gradient(90deg, #3b82f6, #2563eb);">HTFT</div>
                         <div class="premium-card-desc">Expert HT/FT tips with huge odds potential...</div>
                         <div style="font-weight: 900; color: #3b82f6; font-size: 0.75rem; margin: 2px 0;">30+ ODDS</div>
-                        <div style='font-size: 0.65rem; color: #fbb429; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
+                        <div style='font-size: 0.65rem; background: linear-gradient(90deg, #3b82f6, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; margin-bottom: 4px; text-transform: uppercase;'>pay till 5438677</div>
                         <div class="premium-card-price">KSH 600</div>
                         <div class="premium-btn">BUY NOW</div>
                     </div>
@@ -3106,10 +3159,20 @@
                                     <div class="global-price-item">
                                         <span style="color: #94a3b8; font-weight: 600;">Golden Fixed</span>
                                         <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$9</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+</div>
+         </div>
+     </div>
+ </div>
+ 
+ <!-- Contact Number at End of Modal -->
+ <div class="modal-contact-footer">
+     <div class="container">
+         <div class="contact-info">
+             <span class="contact-label">Contact Support:</span>
+             <a href="tel:+254739162763" class="contact-number-modal">+254 739 162 763</a>
+         </div>
+     </div>
+ </div>
                         <div class="global-footer">
                             <a href="international-payment.html" class="global-btn">Click to GET ACCESS</a>
                         </div>
@@ -3699,11 +3762,12 @@
 
                     <div class="mpesa-instructions">
                         <h4>M-Pesa Payment - How to pay:</h4>
-                        <ol>
-                            <li>Go to M-Pesa > Lipa na M-Pesa > Buy Goods</li>
-                            <li>Enter Till Number: <strong>5438677</strong></li>
-                            <li>Enter Amount: <strong id="instructionAmount">KSH 0</strong></li>
-                            <li>Complete payment & paste confirmation below</li>
+<ol>
+                             <li>Go to M-Pesa > Lipa na M-Pesa > Buy Goods</li>
+                             <li>Enter Till Number: <strong>5438677</strong></li>
+                             <li>contact +254739162763</li>
+                             <li>Enter Amount: <strong id="instructionAmount">KSH 0</strong></li>
+                             <li>Complete payment & paste confirmation below</li>
                         </ol>
                     </div>
                 </div>
