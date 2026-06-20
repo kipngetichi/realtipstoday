@@ -4344,23 +4344,29 @@
 
             // Calculate Total Odds Function
             function calculateTotalOdds() {
-                const oddsElements = document.querySelectorAll('.odds-val');
-                let totalOdds = 1;
+                // Find all proof tables
+                const proofTables = document.querySelectorAll('.proof-table');
                 
-                oddsElements.forEach(element => {
-                    const oddsValue = parseFloat(element.textContent);
-                    if (!isNaN(oddsValue)) {
-                        totalOdds *= oddsValue;
+                proofTables.forEach(table => {
+                    const oddsElements = table.querySelectorAll('.odds-val');
+                    let totalOdds = 1;
+                    
+                    oddsElements.forEach(element => {
+                        const oddsValue = parseFloat(element.textContent);
+                        if (!isNaN(oddsValue)) {
+                            totalOdds *= oddsValue;
+                        }
+                    });
+                    
+                    // Find the corresponding total-odds element for this table
+                    const proofCard = table.closest('.proof-card');
+                    if (proofCard) {
+                        const totalOddsElement = proofCard.querySelector('.total-odds');
+                        if (totalOddsElement) {
+                            totalOddsElement.textContent = 'Total Odds: ' + totalOdds.toFixed(2);
+                        }
                     }
                 });
-                
-                // Update all total-odds elements
-                const totalOddsElements = document.querySelectorAll('.total-odds');
-                totalOddsElements.forEach(element => {
-                    element.textContent = 'Total Odds: ' + totalOdds.toFixed(2);
-                });
-                
-                return totalOdds;
             }
             
             // Run the calculation on page load
