@@ -736,22 +736,44 @@
             margin-bottom: 3rem;
         }
         .premium-card {
-            background-color: #1c1d29;
+            background: linear-gradient(145deg, #1e2638 0%, #171b2a 100%);
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.10);
             padding: 2rem 1.5rem;
             text-align: center;
             position: relative;
-            transition: transform 0.2s;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
             text-decoration: none;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: hidden;
+            box-shadow: 0 16px 35px rgba(0,0,0,0.18);
         }
         .premium-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.28);
+            box-shadow: 0 22px 45px rgba(0,0,0,0.28);
+        }
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            inset: 0 0 auto;
+            height: 4px;
+            background: var(--card-accent, #10b981);
+        }
+        .premium-card.daily-plan {
+            --card-accent: #10b981;
+        }
+        .premium-card.three-day-plan {
+            --card-accent: #a855f7;
+            background: linear-gradient(145deg, #282044 0%, #1b1c31 100%);
+        }
+        .premium-card.weekly-plan {
+            --card-accent: #3b82f6;
+            background: linear-gradient(145deg, #1b3152 0%, #171d31 100%);
+            border-color: rgba(59,130,246,0.35);
         }
         .premium-badge-wrapper {
             display: inline-block;
@@ -781,6 +803,49 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+        }
+        .premium-card-duration {
+            color: #cbd5e1;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: -0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .premium-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+                padding: 0 !important;
+            }
+            .premium-card {
+                min-height: 0 !important;
+                padding: 1.35rem 1rem !important;
+                border-radius: 14px !important;
+            }
+            .premium-card.daily-plan {
+                background: linear-gradient(145deg, #173b32 0%, #171f2c 100%) !important;
+            }
+            .premium-card.three-day-plan {
+                background: linear-gradient(145deg, #30204d 0%, #1b1c31 100%) !important;
+            }
+            .premium-card.weekly-plan {
+                background: linear-gradient(145deg, #193a63 0%, #171d31 100%) !important;
+            }
+            .premium-card-desc {
+                font-size: 0.82rem !important;
+                line-height: 1.4 !important;
+                min-height: 0 !important;
+            }
+            .premium-card-price {
+                margin-bottom: 0.6rem !important;
+            }
+            .premium-card-duration {
+                margin-top: 0 !important;
+                margin-bottom: 0.8rem !important;
+            }
         }
 
         /* Live Score Section */
@@ -2519,27 +2584,30 @@
          <section class="premium-section">
                <div class="container">
                    <h2 class="section-title" style="text-align: center;"><span>Daily</span> Odds</h2>
-                   <p class="section-subtitle">Subscription valid for 24 hours</p>
+                   <p class="section-subtitle">Choose the odds level and subscription period that fits you best</p>
                    
                    <div class="premium-grid">
-                        <div class="premium-card buy-trigger" data-plan="2+ Odds Daily" data-amount="150">
-                            <div class="premium-badge-wrapper">2+ ODDS</div>
-                            <div class="premium-card-desc">Daily 2+ odds analysis with expe...</div>
-                            <div class="premium-card-price">KSH 150</div>
+                        <div class="premium-card daily-plan buy-trigger" data-plan="2+ Odds Daily" data-amount="250">
+                            <div class="premium-badge-wrapper">DAILY STARTER</div>
+                            <div class="premium-card-desc">Daily 2+ odds analysis with carefully selected football picks.</div>
+                            <div class="premium-card-price">Ksh 250</div>
+                            <div class="premium-card-duration">24-hour access</div>
                             <div class="premium-btn">BUY NOW</div>
                         </div>
                        
-                        <div class="premium-card buy-trigger" data-plan="5+ Odds Daily" data-amount="300">
-                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #6366f1, #a855f7);">5+ ODDS</div>
-                            <div class="premium-card-desc">Daily 5+ odds analysis with expe...</div>
-                            <div class="premium-card-price">KSH 300</div>
+                        <div class="premium-card three-day-plan buy-trigger" data-plan="5+ Odds - 3 Days" data-amount="950">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #6366f1, #a855f7);">3-DAY PASS</div>
+                            <div class="premium-card-desc">Three days of 5+ odds analysis with expert selections and daily updates.</div>
+                            <div class="premium-card-price">Ksh 950</div>
+                            <div class="premium-card-duration">3-day subscription</div>
                             <div class="premium-btn">BUY NOW</div>
                         </div>
                        
-                        <div class="premium-card buy-trigger" data-plan="10+ Odds Daily" data-amount="450">
-                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #3b82f6, #1d4ed8);">10+ ODDS</div>
-                            <div class="premium-card-desc">Daily 10+ odds analysis with expe...</div>
-                            <div class="premium-card-price">KSH 450</div>
+                        <div class="premium-card weekly-plan buy-trigger" data-plan="10+ Odds - Weekly" data-amount="1850">
+                            <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #3b82f6, #1d4ed8);">WEEKLY PRO</div>
+                            <div class="premium-card-desc">A full week of premium 10+ odds analysis for serious value seekers.</div>
+                            <div class="premium-card-price">Ksh 1850</div>
+                            <div class="premium-card-duration">7-day subscription</div>
                             <div class="premium-btn">BUY NOW</div>
                         </div>
                    </div>
