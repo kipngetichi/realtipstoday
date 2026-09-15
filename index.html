@@ -285,7 +285,7 @@
         }
         .hero-free-tip-footer {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             background: rgba(15, 23, 42, 0.5);
             padding: 1.25rem 1.5rem;
@@ -296,15 +296,16 @@
         .hero-free-tip-time {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
             color: #94a3b8;
             font-size: 0.85rem;
             font-weight: 600;
         }
         .hero-free-tip-prediction {
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 0.75rem;
+            text-align: center;
         }
         .hero-free-tip-prediction span {
             color: rgba(148, 163, 184, 0.7);
@@ -538,13 +539,15 @@
                 margin-bottom: 1rem;
             }
             .hero-free-tip-match {
-                flex-direction: column;
-                gap: 0.4rem;
+                flex-direction: row;
+                gap: 0.45rem;
                 margin-bottom: 1rem;
+                white-space: nowrap;
             }
             .hero-free-tip-match .team {
-                font-size: 1.4rem;
+                font-size: clamp(0.95rem, 5vw, 1.4rem);
                 text-align: center !important;
+                min-width: 0;
             }
             .hero-free-tip-match .vs {
                 width: 28px;
@@ -2432,7 +2435,7 @@
             </a>
             <div class="nav-menu">
                 <a href="Tips/2draws.html" class="nav-link" title="Daily 2 Draws Football Tips">2 Draws</a>
-                <a href="Tips/2odds.html" class="nav-link" title="Daily 2+ Odds Football Predictions">2+ Odds</a>
+                <a href="Tips/2odds.html" class="nav-link" title="Daily 10+ Odds Football Predictions">10+ Odds</a>
                 <a href="Tips/goldentips.html" class="nav-link" title="Golden Fixed Tips (45+ Odds)">Golden Tips</a>
                 <a href="Jptips/index.html" class="nav-link" title="Mega & Betika Jackpot Predictions">Jackpot</a>
                 <a href="testimonial/index.html" class="nav-link" title="Realtime Tips Customer Testimonials">Testimonials</a>
@@ -2471,6 +2474,12 @@
                          </div>
                          <div class="hero-free-tip-date" id="dynamic-hero-date">Loading...</div>
                      </div>
+                     <div class="hero-free-tip-footer">
+                         <div class="hero-free-tip-time">
+                             Time: 22:00
+                         </div>
+                     </div>
+
                      <div class="hero-free-tip-match">
                          <span class="team">Ipswich</span>
                          <span class="vs">VS</span>
@@ -2494,15 +2503,9 @@
                        }
                      }
                      </script>
-                     <div class="hero-free-tip-footer">
-                         <div class="hero-free-tip-time">
-                             <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                             22:00 GMT
-                         </div>
-                         <div class="hero-free-tip-prediction">
-                             <span>Pick:</span>
-                             <strong>OV2.5</strong>
-                         </div>
+                     <div class="hero-free-tip-prediction">
+                         <span>Pick:</span>
+                         <strong>OV2.5</strong>
                      </div>
                  </div>
 
