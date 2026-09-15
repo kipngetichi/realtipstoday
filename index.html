@@ -816,14 +816,14 @@
 
         @media (max-width: 768px) {
             .premium-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1rem !important;
-                padding: 0 !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 4px !important;
+                padding: 0 4px !important;
             }
             .premium-card {
                 min-height: 0 !important;
-                padding: 1.35rem 1rem !important;
-                border-radius: 14px !important;
+                padding: 0.8rem 2px !important;
+                border-radius: 8px !important;
             }
             .premium-card.daily-plan {
                 background: linear-gradient(145deg, #173b32 0%, #171f2c 100%) !important;
@@ -835,16 +835,27 @@
                 background: linear-gradient(145deg, #193a63 0%, #171d31 100%) !important;
             }
             .premium-card-desc {
-                font-size: 0.82rem !important;
-                line-height: 1.4 !important;
-                min-height: 0 !important;
+                font-size: 0.6rem !important;
+                line-height: 1.1 !important;
+                min-height: 2.2rem !important;
             }
             .premium-card-price {
+                font-size: 0.85rem !important;
                 margin-bottom: 0.6rem !important;
             }
             .premium-card-duration {
+                font-size: 0.58rem !important;
                 margin-top: 0 !important;
                 margin-bottom: 0.8rem !important;
+            }
+            .premium-badge-wrapper {
+                font-size: 0.55rem !important;
+                margin-bottom: 6px !important;
+                padding: 6px 3px !important;
+            }
+            .premium-btn {
+                font-size: 0.6rem !important;
+                padding: 5px 2px !important;
             }
         }
 
