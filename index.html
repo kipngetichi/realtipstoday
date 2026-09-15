@@ -1753,6 +1753,42 @@
             justify-content: space-between;
             align-items: center;
         }
+        .global-price-item.global-daily {
+            border-color: rgba(59, 130, 246, 0.35);
+            background: rgba(59, 130, 246, 0.08);
+        }
+        .global-price-item.global-draws {
+            border-color: rgba(168, 85, 247, 0.35);
+            background: rgba(168, 85, 247, 0.08);
+        }
+        .global-price-item.global-golden {
+            border-color: rgba(245, 158, 11, 0.35);
+            background: rgba(245, 158, 11, 0.08);
+        }
+        .global-price-item.global-daily > span:first-child,
+        .international-pricing-list .global-daily > span:first-child {
+            color: #93c5fd !important;
+        }
+        .global-price-item.global-daily > span:last-child,
+        .international-pricing-list .global-daily > span:last-child {
+            color: #60a5fa !important;
+        }
+        .global-price-item.global-draws > span:first-child,
+        .international-pricing-list .global-draws > span:first-child {
+            color: #d8b4fe !important;
+        }
+        .global-price-item.global-draws > span:last-child,
+        .international-pricing-list .global-draws > span:last-child {
+            color: #c084fc !important;
+        }
+        .global-price-item.global-golden > span:first-child,
+        .international-pricing-list .global-golden > span:first-child {
+            color: #fcd34d !important;
+        }
+        .global-price-item.global-golden > span:last-child,
+        .international-pricing-list .global-golden > span:last-child {
+            color: #fbbf24 !important;
+        }
         
         @media (max-width: 768px) {
             .global-card {
@@ -2823,16 +2859,16 @@
                                     </p>
                                     
                                     <div class="global-price-grid">
-                                        <div class="global-price-item">
+                                        <div class="global-price-item global-daily">
                                             <span style="color: #94a3b8; font-weight: 600;">10+ Odds Daily</span>
                                             <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$3</span>
                                         </div>
-                                        <div class="global-price-item">
-                                            <span style="color: #94a3b8; font-weight: 600;">2 Draws Daily</span>
+                                        <div class="global-price-item global-draws">
+                                            <span style="color: #94a3b8; font-weight: 600;">2 Draws Daily - 18+ Odds</span>
                                             <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$5</span>
                                         </div>
-                                        <div class="global-price-item">
-                                            <span style="color: #94a3b8; font-weight: 600;">Golden Fixed</span>
+                                        <div class="global-price-item global-golden">
+                                            <span style="color: #94a3b8; font-weight: 600;">Golden Fixed - 35+ Odds</span>
                                             <span style="color: #14b8a6; font-size: 1.4rem; font-weight: 900;">$9</span>
                                         </div>
                                     </div>
@@ -3212,16 +3248,16 @@
                         </div>
 
                         <div class="international-pricing-list" style="margin: 1.2rem 0; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 10px; border: 1px solid rgba(255,255,255,0.05);">
-                            <div style="display: flex; justify-content: space-between; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <div class="global-daily" style="display: flex; justify-content: space-between; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
                                 <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 700;">2+ Odds Daily</span>
                                 <span style="color: #14b8a6; font-weight: 900;">$3</span>
                             </div>
-                            <div style="display: flex; justify-content: space-between; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                                <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 700;">2 Draws Daily</span>
+                            <div class="global-draws" style="display: flex; justify-content: space-between; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 700;">2 Draws Daily - 18+ Odds</span>
                                 <span style="color: #14b8a6; font-weight: 900;">$5</span>
                             </div>
-                            <div style="display: flex; justify-content: space-between; padding: 6px 8px;">
-                                <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 700;">Golden Fixed</span>
+                            <div class="global-golden" style="display: flex; justify-content: space-between; padding: 6px 8px;">
+                                <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 700;">Golden Fixed - 35+ Odds</span>
                                 <span style="color: #14b8a6; font-weight: 900;">$9</span>
                             </div>
                         </div>
