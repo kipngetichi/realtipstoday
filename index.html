@@ -796,8 +796,27 @@
             color: #8b8d9b;
             font-size: 0.9rem;
             line-height: 1.5;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.35rem;
             flex-grow: 1;
+        }
+        .premium-pay-till {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            color: #94a3b8;
+            font-size: 0.72rem;
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+            white-space: nowrap;
+        }
+        .premium-pay-till .inline-pay-till-copy {
+            color: #d1fae5;
+            font-family: "Courier New", monospace;
+            font-weight: 900;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
         .premium-card-price {
             font-size: 1.5rem;
@@ -838,6 +857,11 @@
                 font-size: 0.6rem !important;
                 line-height: 1.1 !important;
                 min-height: 2.2rem !important;
+            }
+            .premium-pay-till {
+                font-size: 0.5rem !important;
+                gap: 0.15rem !important;
+                margin-bottom: 0.25rem !important;
             }
             .premium-card-price {
                 font-size: 0.85rem !important;
@@ -2598,17 +2622,19 @@
                    <p class="section-subtitle">Choose the odds level and subscription period that fits you best</p>
                    
                    <div class="premium-grid">
-                        <div class="premium-card daily-plan buy-trigger" data-plan="2+ Odds Daily" data-amount="250">
+                        <div class="premium-card daily-plan buy-trigger" data-plan="10+ Odds Daily" data-amount="250">
                             <div class="premium-badge-wrapper">DAILY STARTER</div>
-                            <div class="premium-card-desc">Daily 2+ odds analysis with carefully selected football picks.</div>
+                            <div class="premium-card-desc">Daily 10+ odds analysis with carefully selected football picks.</div>
+                            <div class="premium-pay-till">Pay Till <span class="inline-pay-till-copy" data-pay-till="5438677">5438677</span></div>
                             <div class="premium-card-price">Ksh 250</div>
                             <div class="premium-card-duration">24-hour access</div>
                             <div class="premium-btn">BUY NOW</div>
                         </div>
                        
-                        <div class="premium-card three-day-plan buy-trigger" data-plan="5+ Odds - 3 Days" data-amount="950">
+                        <div class="premium-card three-day-plan buy-trigger" data-plan="10+ Odds - 3 Days" data-amount="950">
                             <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #6366f1, #a855f7);">3-DAY PASS</div>
-                            <div class="premium-card-desc">Three days of 5+ odds analysis with expert selections and daily updates.</div>
+                            <div class="premium-card-desc">Three days of 10+ odds analysis with expert selections and daily updates.</div>
+                            <div class="premium-pay-till">Pay Till <span class="inline-pay-till-copy" data-pay-till="5438677">5438677</span></div>
                             <div class="premium-card-price">Ksh 950</div>
                             <div class="premium-card-duration">3-day subscription</div>
                             <div class="premium-btn">BUY NOW</div>
@@ -2617,6 +2643,7 @@
                         <div class="premium-card weekly-plan buy-trigger" data-plan="10+ Odds - Weekly" data-amount="1850">
                             <div class="premium-badge-wrapper" style="background: linear-gradient(90deg, #3b82f6, #1d4ed8);">WEEKLY PRO</div>
                             <div class="premium-card-desc">A full week of premium 10+ odds analysis for serious value seekers.</div>
+                            <div class="premium-pay-till">Pay Till <span class="inline-pay-till-copy" data-pay-till="5438677">5438677</span></div>
                             <div class="premium-card-price">Ksh 1850</div>
                             <div class="premium-card-duration">7-day subscription</div>
                             <div class="premium-btn">BUY NOW</div>
