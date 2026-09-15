@@ -9,22 +9,25 @@ $telegramLink = 'https://t.me/25471380429';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get our 2 + odds daily package — consistent daily profits, instant delivery via SMS/WhatsApp after payment. Multiple payment options available.">
-    <title>2 + odds — Realtime Tips</title>
+    <meta name="description" content="Get our 10+ odds daily package — premium daily football picks with higher value, instant delivery after payment, and secure payment options.">
+    <title>10+ Odds Daily — Realtime Tips</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <style>
         :root {
-            --bg-dark: #0b122b;
-            --bg-light: #f3f6ff;
+            --bg-dark: #081420;
+            --bg-mid: #0f172a;
+            --bg-light: #eef6ff;
             --card: #ffffff;
-            --accent: #10b981;
+            --accent: #14b86a;
+            --accent-2: #22c55e;
             --primary: #2563eb;
+            --gold: #fbbf24;
             --border: rgba(15, 23, 42, 0.10);
             --text-main: #0f172a;
             --text-soft: #475569;
             --white: #ffffff;
             --radius-lg: 22px;
-            --shadow-soft: 0 20px 40px rgba(6, 10, 26, 0.16);
+            --shadow-soft: 0 24px 60px rgba(8, 19, 34, 0.20);
         }
 
         * {
@@ -36,7 +39,10 @@ $telegramLink = 'https://t.me/25471380429';
             font-family: "Segoe UI", Roboto, Arial, sans-serif;
             color: var(--text-main);
             line-height: 1.5;
-            background: linear-gradient(180deg, #f8fbff 0%, var(--bg-light) 100%);
+            background:
+                radial-gradient(circle at top left, rgba(20, 184, 106, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 30%),
+                linear-gradient(180deg, #f5f9ff 0%, #edf3ff 100%);
             overflow-x: hidden;
         }
 
@@ -47,11 +53,21 @@ $telegramLink = 'https://t.me/25471380429';
 
         .hero-wrap {
             background:
-                radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.24), transparent 42%),
-                radial-gradient(circle at 85% 0%, rgba(37, 99, 235, 0.18), transparent 35%),
-                linear-gradient(145deg, #0f1838 0%, var(--bg-dark) 62%);
+                radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.28), transparent 40%),
+                radial-gradient(circle at 80% 5%, rgba(59, 130, 246, 0.18), transparent 28%),
+                linear-gradient(135deg, #081a2e 0%, #0d1f38 35%, #0c1529 100%);
             color: var(--white);
             padding: 4rem 0 4.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255,255,255,0.04), transparent 35%, rgba(20,184,106,0.05));
+            pointer-events: none;
         }
 
         .hero {
@@ -59,25 +75,31 @@ $telegramLink = 'https://t.me/25471380429';
             grid-template-columns: 1.15fr 0.85fr;
             gap: 2rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: rgba(20, 184, 106, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.35);
             border-radius: 999px;
-            padding: 0.38rem 0.95rem;
-            font-size: 0.92rem;
-            font-weight: 700;
+            padding: 0.45rem 0.95rem;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             margin-bottom: 1rem;
+            color: #d4ffea;
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.6rem);
-            line-height: 1.08;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.04;
             margin: 0 0 1rem;
             max-width: 14ch;
+            letter-spacing: -0.05em;
         }
 
         .hero p {
@@ -88,9 +110,9 @@ $telegramLink = 'https://t.me/25471380429';
         }
 
         .hero-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            backdrop-filter: blur(4px);
+            background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
+            border: 1px solid rgba(255,255,255,0.16);
+            backdrop-filter: blur(6px);
             border-radius: var(--radius-lg);
             padding: 1.6rem;
             box-shadow: var(--shadow-soft);
@@ -725,15 +747,15 @@ $telegramLink = 'https://t.me/25471380429';
         <div class="container hero">
             <section>
                 <span class="hero-badge">Premium Service</span>
-                <h1>2 + odds Daily<br>Consistent Daily Profits</h1>
+                <h1>10+ Odds Daily<br>Big Value, Real Wins</h1>
                 <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-top: 1rem; max-width: 55ch;">
-                    Get reliable 2-odds accumulator tips for consistent daily wins. Perfect for steady, sustainable profits.
+                    Get premium 10+ odds daily selections designed for stronger value, larger upside, and consistent daily wins.
                 </p>
             </section>
                 <aside class="hero-card">
                     <h2>What You Get</h2>
                     <ul>
-                        <li>Curated 2-odds accumulator daily</li>
+                        <li>Curated 10+ odds daily selections</li>
                         <li>Send via SMS or WhatsApp after payment</li>
                         <li>7 days a week service</li>
                         <li>Instant WhatsApp alerts included</li>
@@ -749,12 +771,12 @@ $telegramLink = 'https://t.me/25471380429';
             <section class="trust-section">
                 <div class="trust-box">
                     <span style="background: #10b981; color: white; padding: 0.3rem 1rem; border-radius: 999px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 0.5rem;">Best Value</span>
-                    <h3>2 + odds Daily</h3>
-                    <div class="price">Ksh 100 <span>/ day</span></div>
-                    <p style="color: #065f46; margin: 0.5rem 0 0; font-size: 0.95rem;">Consistent daily profits with proven 2-odds accumulators</p>
+                    <h3>10+ Odds Daily</h3>
+                    <div class="price">Ksh 225 <span>/ day</span></div>
+                    <p style="color: #065f46; margin: 0.5rem 0 0; font-size: 0.95rem;">Premium daily selections with stronger value and real winning potential</p>
 
                      <ul>
-                         <li>2 accumulator odds guaranteed daily</li>
+                         <li>10+ accumulator odds guaranteed daily</li>
                          <li>High success rate</li>
                          <li>Pay Till (Buy Goods): <span class="inline-pay-till-copy" style="cursor: pointer; font-family: 'Courier New', monospace; font-weight: 900; font-size: 1.1rem; color: white; background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%); padding: 0.3rem 0.7rem; border-radius: 6px; letter-spacing: 0.5px; text-shadow: 0 1px 2px rgba(0,0,0,0.2); box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35); transition: all 0.2s ease;" data-pay-till="5438677">5438677</span> <small style="color: #065f46; font-weight: 600; font-size: 0.75rem;">(Click to copy)</small></li>
                          <li>Instant WhatsApp alerts</li>
@@ -762,7 +784,7 @@ $telegramLink = 'https://t.me/25471380429';
                      </ul>
 
                      <a class="cta-main" href="../M-PESAstkpush/stkpush2odds.php" target="_blank" rel="noopener noreferrer">
-                         Get 2 + odds Now
+                         Get 10+ Odds Now
                      </a>
                 </div>
             </section>
@@ -806,19 +828,19 @@ $telegramLink = 'https://t.me/25471380429';
             </section>
 
             <section class="features-section">
-                <h2 class="section-title">Why Choose 2 + odds Daily?</h2>
+                <h2 class="section-title">Why Choose 10+ Odds Daily?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <h4>📊 Consistent Profits</h4>
-                        <p>Our 2-odds accumulators are designed for steady, sustainable daily wins without high risk.</p>
+                        <p>Our premium 10+ odds selections are designed for stronger value, bigger upside, and steady daily wins.</p>
                     </div>
                     <div class="feature-card">
                         <h4>⚡ Instant Delivery</h4>
                         <p>Tips sent via SMS or WhatsApp immediately after payment confirmation.</p>
                     </div>
                     <div class="feature-card">
-                        <h4>🎯 2-Odds Accumulators</h4>
-                        <p>Curated 2-match combinations with 2+ total odds for balanced risk-reward.</p>
+                        <h4>🎯 Premium 10+ Odds</h4>
+                        <p>Curated high-value selections picked for stronger returns and smarter risk management.</p>
                     </div>
                     <div class="feature-card">
                         <h4>💬 Instant Alerts</h4>
@@ -872,18 +894,18 @@ $telegramLink = 'https://t.me/25471380429';
                 </div>
                 <div class="faq-item">
                     <h4>Do you work on weekends?</h4>
-                    <p>2 + odds Daily operates 7 days a week, including weekends, for continuous winning opportunities.</p>
+                    <p>10+ Odds Daily operates 7 days a week, including weekends, for continuous winning opportunities.</p>
                 </div>
             </section>
 
             <div class="guarantee-banner">
                 <strong>🔒 100% Money-Back Guarantee</strong>
-                <p style="margin: 0.5rem 0 0; color: #065f46;">If our 2 + odds tips don't deliver, we refund your money — no questions asked.</p>
+                <p style="margin: 0.5rem 0 0; color: #065f46;">If our 10+ odds tips don't deliver, we refund your money — no questions asked.</p>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
                 <a class="cta-main" href="../M-PESAstkpush/stkpush2odds.php" target="_blank" rel="noopener noreferrer">
-                    Get 2 + odds — Ksh 100/day
+                    Get 10+ Odds — Ksh 225/day
                 </a>
             </div>
         </div>
