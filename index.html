@@ -1690,6 +1690,7 @@
             align-items: center !important;
             text-align: center !important;
             gap: 1.5rem !important;
+            width: 100%;
         }
         .global-card .jackpot-icon {
             background: rgba(20, 184, 166, 0.1);
@@ -1899,18 +1900,19 @@
                 grid-template-columns: 1fr;
             }
             .global-card {
-                flex-direction: row !important;
-                align-items: center !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
                 gap: 0.65rem !important;
                 padding: 0.8rem !important;
                 border-radius: 16px !important;
                 min-height: 0 !important;
             }
             .global-card .jackpot-card-left {
-                flex-direction: row !important;
+                flex-direction: column !important;
                 align-items: center !important;
                 gap: 0.65rem !important;
                 min-width: 0;
+                width: 100% !important;
             }
             .global-card .jackpot-icon {
                 width: 38px !important;
@@ -1923,7 +1925,7 @@
                 height: 20px !important;
             }
             .global-card .jackpot-info {
-                width: auto !important;
+                width: 100% !important;
                 min-width: 0;
             }
             .global-card .jackpot-info h3 {
@@ -1960,11 +1962,12 @@
                 line-height: 1;
             }
             .global-card .global-footer {
-                width: auto !important;
-                margin-top: 0 !important;
-                flex-shrink: 0;
+                width: 100% !important;
+                margin-top: 0.1rem !important;
             }
             .global-card .global-btn {
+                display: block !important;
+                width: 100% !important;
                 padding: 8px 9px !important;
                 font-size: 0.58rem !important;
                 line-height: 1.1;
