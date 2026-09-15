@@ -2362,8 +2362,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 3rem;
-            padding-top: 5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            margin-top: 3rem;
+            border: 1px solid rgba(96, 165, 250, 0.18);
+            border-radius: 24px;
+            background: linear-gradient(135deg, #14243d 0%, #101b31 100%);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
             position: relative;
             z-index: 2;
         }
@@ -2372,6 +2376,21 @@
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
+        }
+        .footer-column:nth-child(1) h4 {
+            color: #60a5fa;
+        }
+        .footer-column:nth-child(2) h4 {
+            color: #c084fc;
+        }
+        .footer-column:nth-child(3) h4 {
+            color: #34d399;
+        }
+        .footer-guarantees .guarantee-item:first-child strong {
+            color: #fbbf24;
+        }
+        .footer-guarantees .guarantee-item:last-child strong {
+            color: #22d3ee;
         }
         .footer-column a {
             display: block;
@@ -2412,6 +2431,11 @@
             font-size: 0.85rem;
             line-height: 1.4;
             margin: 0;
+        }
+
+        .footer-bottom .footer-column,
+        .footer-bottom .footer-guarantees {
+            min-width: 0;
         }
         .footer-bottom-links {
             display: flex;
@@ -2470,6 +2494,56 @@
             .pricing-card.featured:hover { transform: translateY(-8px); }
             .footer-bottom-links { flex-direction: column; text-align: center; }
             .footer-legal a { margin: 0 1rem; }
+
+            .footer-bottom {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
+                padding: 1.15rem;
+                margin-top: 2rem;
+                border-radius: 18px;
+            }
+
+            .footer-column h4 {
+                font-size: 0.82rem;
+                line-height: 1.2;
+                margin-bottom: 0.75rem;
+                white-space: nowrap;
+            }
+
+            .footer-column a {
+                margin-bottom: 0.55rem;
+                font-size: 0.7rem;
+                line-height: 1.25;
+            }
+
+            .footer-guarantees {
+                gap: 0.75rem;
+            }
+
+            .guarantee-item {
+                gap: 0.45rem;
+                padding: 0.65rem;
+                border: 1px solid rgba(96, 165, 250, 0.16);
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            .guarantee-item svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .guarantee-item strong {
+                font-size: 0.7rem;
+                line-height: 1.2;
+                margin-bottom: 0.2rem;
+            }
+
+            .guarantee-item p {
+                color: #a9bad0;
+                font-size: 0.62rem;
+                line-height: 1.25;
+            }
 
             .footer-pricing-cards {
                 width: 100%;
