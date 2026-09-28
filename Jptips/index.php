@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-$whatsappLink = 'https://wa.me/254739162739?text=Hello%20Realtime%20Tips%2C%20I%20want%20premium%20football%20sure%20tips.';
-$telegramLink = 'https://t.me/25471380429';
+$whatsappLink = 'https://wa.me/254739162763?text=Hello%20Realtime%20Tips%2C%20I%20want%20premium%20football%20sure%20tips.';
+$telegramLink = 'https://t.me/254739162763';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -906,7 +906,7 @@ $telegramLink = 'https://t.me/25471380429';
             }
             const plan = modalTitle.textContent.replace('Buy ', '').replace(' Plan', '');
             const amount = modalAmount.textContent;
-            const wa = 'https://wa.me/254739162739?text=' + encodeURIComponent(
+            const wa = 'https://wa.me/254739162763?text=' + encodeURIComponent(
                 'Hello Realtime Tips, I have paid for ' + plan + ' (' + amount + ').\n\nM-Pesa Confirmation:\n' + msg
             );
             window.open(wa, '_blank');
