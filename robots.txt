@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://realtimetips.org/sitemap.xml
